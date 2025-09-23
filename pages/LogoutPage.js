@@ -1,8 +1,6 @@
 const BasePage = require('./BasePage');
 
-/**
- * LogoutPage class representing the logout confirmation page
- */
+
 class LogoutPage extends BasePage {
     constructor(page) {
         super(page);

@@ -1,16 +1,17 @@
 // @ts-check
-import { defineConfig, devices } from '@playwright/test';
+const { defineConfig, devices } = require('@playwright/test');
+const config = require('./config/config.js');
+// https://playwright.dev/docs/test-configuration
 
-
-export default defineConfig({
+module.exports = defineConfig({
   testDir: './tests',
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : undefined,
+  retries: process.env.CI ? config.test.retries : 0,
+  workers: process.env.CI ? config.test.workers : undefined,
   reporter: 'html',
   use: {
-    baseURL: 'https://automationteststore.com',
+    baseURL: config.app.baseUrl,
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
     trace: 'on-first-retry',
