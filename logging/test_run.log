@@ -313,3 +313,5 @@
 2025-09-23T16:26:05+05:30 [info]: Setting up test pages and navigating to home page
 2025-09-23T16:26:06+05:30 [info]: Attempt 5: Testing with wrong password: wrongpass5
 2025-09-23T16:26:06+05:30 [info]: Testing with correct credentials after failed attempts
+2025-09-23T16:26:10+05:30 [info]: Successfully navigated to home page
+2025-09-23T16:26:11+05:30 [info]: Successfully navigated to home page
