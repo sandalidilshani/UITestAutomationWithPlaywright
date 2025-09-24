@@ -3459,3 +3459,84 @@ Call log:
 2025-09-24T17:02:36+05:30 [info]: Login fixture setup completed successfully
 2025-09-24T17:02:40+05:30 [info]: Setting up guest fixture - no authentication required
 2025-09-24T17:02:53+05:30 [info]: Guest fixture setup completed successfully
+2025-09-24T19:19:59+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T19:19:59+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T19:19:59+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T19:20:29+05:30 [error]: Login fixture setup failed: page.goto: net::ERR_TIMED_OUT at https://automationteststore.com/
+Call log:
+[2m  - navigating to "https://automationteststore.com/", waiting until "load"[22m
+
+2025-09-24T19:20:30+05:30 [error]: Login fixture setup failed: page.goto: net::ERR_TIMED_OUT at https://automationteststore.com/
+Call log:
+[2m  - navigating to "https://automationteststore.com/", waiting until "load"[22m
+
+2025-09-24T19:20:30+05:30 [error]: Login fixture setup failed: page.goto: net::ERR_TIMED_OUT at https://automationteststore.com/
+Call log:
+[2m  - navigating to "https://automationteststore.com/", waiting until "load"[22m
+
+2025-09-24T19:20:35+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T19:20:36+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T19:20:36+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T19:21:06+05:30 [error]: Login fixture setup failed: page.goto: net::ERR_TIMED_OUT at https://automationteststore.com/
+Call log:
+[2m  - navigating to "https://automationteststore.com/", waiting until "load"[22m
+
+2025-09-24T19:21:06+05:30 [error]: Login fixture setup failed: page.goto: net::ERR_TIMED_OUT at https://automationteststore.com/
+Call log:
+[2m  - navigating to "https://automationteststore.com/", waiting until "load"[22m
+
+2025-09-24T19:21:06+05:30 [error]: Login fixture setup failed: page.goto: net::ERR_TIMED_OUT at https://automationteststore.com/
+Call log:
+[2m  - navigating to "https://automationteststore.com/", waiting until "load"[22m
+
+2025-09-24T19:21:11+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T19:21:12+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T19:21:12+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T19:21:41+05:30 [error]: Login fixture setup failed: page.goto: net::ERR_TIMED_OUT at https://automationteststore.com/
+Call log:
+[2m  - navigating to "https://automationteststore.com/", waiting until "load"[22m
+
+2025-09-24T19:21:42+05:30 [error]: Login fixture setup failed: page.goto: net::ERR_TIMED_OUT at https://automationteststore.com/
+Call log:
+[2m  - navigating to "https://automationteststore.com/", waiting until "load"[22m
+
+2025-09-24T19:21:42+05:30 [error]: Login fixture setup failed: page.goto: net::ERR_TIMED_OUT at https://automationteststore.com/
+Call log:
+[2m  - navigating to "https://automationteststore.com/", waiting until "load"[22m
+
+2025-09-24T19:21:47+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T19:21:48+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T19:21:48+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T19:22:00+05:30 [error]: Login fixture setup failed: page.goto: net::ERR_ABORTED; maybe frame was detached?
+Call log:
+[2m  - navigating to "https://automationteststore.com/", waiting until "load"[22m
+
+2025-09-24T19:22:00+05:30 [error]: Login fixture setup failed: page.goto: net::ERR_ABORTED; maybe frame was detached?
+Call log:
+[2m  - navigating to "https://automationteststore.com/", waiting until "load"[22m
+
+2025-09-24T19:22:00+05:30 [error]: Login fixture setup failed: page.goto: net::ERR_ABORTED; maybe frame was detached?
+Call log:
+[2m  - navigating to "https://automationteststore.com/", waiting until "load"[22m
+
+2025-09-24T19:22:17+05:30 [info]: Setting up guest fixture - no authentication required
+2025-09-24T19:22:17+05:30 [info]: Setting up guest fixture - no authentication required
+2025-09-24T19:22:17+05:30 [info]: Setting up guest fixture - no authentication required
+2025-09-24T19:25:56+05:30 [info]: Setting up guest fixture - no authentication required
+2025-09-24T19:25:56+05:30 [info]: Setting up guest fixture - no authentication required
+2025-09-24T19:25:56+05:30 [info]: Setting up guest fixture - no authentication required
+2025-09-24T19:46:54+05:30 [info]: Setting up guest fixture - no authentication required
+2025-09-24T19:47:07+05:30 [info]: Setting up guest fixture - no authentication required
+2025-09-24T19:47:11+05:30 [info]: Setting up guest fixture - no authentication required
+2025-09-24T19:47:34+05:30 [info]: Guest fixture setup completed successfully
+2025-09-24T19:52:07+05:30 [info]: Setting up guest fixture - no authentication required
+2025-09-24T19:52:16+05:30 [info]: Guest fixture setup completed successfully
+2025-09-24T19:52:32+05:30 [info]: Setting up guest fixture - no authentication required
+2025-09-24T19:52:40+05:30 [info]: Guest fixture setup completed successfully
+2025-09-24T19:52:47+05:30 [info]: Setting up guest fixture - no authentication required
+2025-09-24T19:52:49+05:30 [info]: Setting up guest fixture - no authentication required
+2025-09-24T19:52:57+05:30 [info]: Setting up guest fixture - no authentication required
+2025-09-24T19:53:08+05:30 [info]: Guest fixture setup completed successfully
+2025-09-24T19:53:12+05:30 [info]: Setting up guest fixture - no authentication required
+2025-09-24T19:53:21+05:30 [info]: Guest fixture setup completed successfully
+2025-09-24T19:53:29+05:30 [info]: Setting up guest fixture - no authentication required

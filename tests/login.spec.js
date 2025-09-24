@@ -125,7 +125,6 @@ test.describe('TS001-Validate User Login Flow', () => {
         if (isSuccessful) {
             await expect(page).toHaveTitle('My Account');
             await accountPage.clickLogoff();
-            await logoutPage.clickContinue();
         } else {
             const errorMessage = page.locator('.alert-error, .alert-danger, .error');
             await expect(errorMessage).toBeVisible();

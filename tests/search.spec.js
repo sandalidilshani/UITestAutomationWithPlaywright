@@ -9,7 +9,7 @@ const authFile = path.join(__dirname, 'storeLoginContext', 'storageState.json');
 test.describe('Search Functionality Tests', () => {
     let homePage;
     let searchPage;
-    test.beforeEach(async ({ loginFixture: page }) => {
+    test.beforeEach(async ({page}) => {
         homePage = new HomePage(page);
         searchPage = new SearchPage(page);
         await homePage.navigate();

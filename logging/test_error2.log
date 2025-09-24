@@ -1,0 +1,12 @@
+2025-09-24T19:22:00+05:30 [error]: Login fixture setup failed: page.goto: net::ERR_ABORTED; maybe frame was detached?
+Call log:
+[2m  - navigating to "https://automationteststore.com/", waiting until "load"[22m
+
+2025-09-24T19:22:00+05:30 [error]: Login fixture setup failed: page.goto: net::ERR_ABORTED; maybe frame was detached?
+Call log:
+[2m  - navigating to "https://automationteststore.com/", waiting until "load"[22m
+
+2025-09-24T19:22:00+05:30 [error]: Login fixture setup failed: page.goto: net::ERR_ABORTED; maybe frame was detached?
+Call log:
+[2m  - navigating to "https://automationteststore.com/", waiting until "load"[22m
+

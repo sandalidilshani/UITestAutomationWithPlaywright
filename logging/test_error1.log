@@ -95,3 +95,39 @@ Call log:
   "domcontentloaded" event fired
 ============================================================
 2025-09-24T17:02:19+05:30 [error]: Login fixture setup failed: page.waitForLoadState: Target page, context or browser has been closed
+2025-09-24T19:20:29+05:30 [error]: Login fixture setup failed: page.goto: net::ERR_TIMED_OUT at https://automationteststore.com/
+Call log:
+[2m  - navigating to "https://automationteststore.com/", waiting until "load"[22m
+
+2025-09-24T19:20:30+05:30 [error]: Login fixture setup failed: page.goto: net::ERR_TIMED_OUT at https://automationteststore.com/
+Call log:
+[2m  - navigating to "https://automationteststore.com/", waiting until "load"[22m
+
+2025-09-24T19:20:30+05:30 [error]: Login fixture setup failed: page.goto: net::ERR_TIMED_OUT at https://automationteststore.com/
+Call log:
+[2m  - navigating to "https://automationteststore.com/", waiting until "load"[22m
+
+2025-09-24T19:21:06+05:30 [error]: Login fixture setup failed: page.goto: net::ERR_TIMED_OUT at https://automationteststore.com/
+Call log:
+[2m  - navigating to "https://automationteststore.com/", waiting until "load"[22m
+
+2025-09-24T19:21:06+05:30 [error]: Login fixture setup failed: page.goto: net::ERR_TIMED_OUT at https://automationteststore.com/
+Call log:
+[2m  - navigating to "https://automationteststore.com/", waiting until "load"[22m
+
+2025-09-24T19:21:06+05:30 [error]: Login fixture setup failed: page.goto: net::ERR_TIMED_OUT at https://automationteststore.com/
+Call log:
+[2m  - navigating to "https://automationteststore.com/", waiting until "load"[22m
+
+2025-09-24T19:21:41+05:30 [error]: Login fixture setup failed: page.goto: net::ERR_TIMED_OUT at https://automationteststore.com/
+Call log:
+[2m  - navigating to "https://automationteststore.com/", waiting until "load"[22m
+
+2025-09-24T19:21:42+05:30 [error]: Login fixture setup failed: page.goto: net::ERR_TIMED_OUT at https://automationteststore.com/
+Call log:
+[2m  - navigating to "https://automationteststore.com/", waiting until "load"[22m
+
+2025-09-24T19:21:42+05:30 [error]: Login fixture setup failed: page.goto: net::ERR_TIMED_OUT at https://automationteststore.com/
+Call log:
+[2m  - navigating to "https://automationteststore.com/", waiting until "load"[22m
+

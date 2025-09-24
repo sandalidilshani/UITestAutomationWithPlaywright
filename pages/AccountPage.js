@@ -1,3 +1,4 @@
+const { expect } = require('@playwright/test');
 const BasePage = require('./BasePage');
 class AccountPage extends BasePage {
     constructor(page) {
@@ -32,6 +33,10 @@ class AccountPage extends BasePage {
     
     async clickLogoff() {
         await this.logoffLink.click();
+        await expect(this.page.getByText('Account Logout', { exact: true })).toBeVisible();
+        const button = this.page.locator('.btn.btn-default.mr10');
+        await button.click();
+        await this.page.waitForLoadState();
     }
 
     

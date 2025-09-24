@@ -16,12 +16,12 @@ class HomePage extends BasePage {
 
     async navigate() {
         await this.navigateTo(this.baseUrl);
-        await this.page.waitForLoadState('networkidle');
+        await this.page.waitForLoadState();
     }
 
     async goToHome() {
         await this.homeLink.click();
-        await this.page.waitForLoadState('networkidle');
+        await this.page.waitForLoadState();
     }
 
     async clickCategoryMenu() {
@@ -30,17 +30,17 @@ class HomePage extends BasePage {
 
     async goToAccount() {
         await this.accountLink.click();
-        await this.page.waitForLoadState('networkidle');
+        await this.page.waitForLoadState();
     }
 
     async goToCart() {
         await this.cartLink.click();
-        await this.page.waitForLoadState('networkidle');
+        await this.page.waitForLoadState();
     }
 
     async goToCheckout() {
         await this.checkoutLink.click();
-        await this.page.waitForLoadState('networkidle');
+        await this.page.waitForLoadState();
     }
 
     async clickLoginOrRegister() {
@@ -65,7 +65,7 @@ class HomePage extends BasePage {
         await this.searchKeywordsTextbox.click();
         await this.searchKeywordsTextbox.fill(searchTerm);
         await this.searchKeywordsTextbox.press('Enter');
-        await this.page.waitForLoadState('networkidle');
+        await this.page.waitForLoadState();
     }
 }
 

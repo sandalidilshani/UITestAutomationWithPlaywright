@@ -32,7 +32,7 @@ class CheckoutPage extends BasePage {
     async navigateToCheckout() {
         // Navigate to cart page first
         await this.page.goto('/index.php?rt=checkout/cart');
-        await this.page.waitForLoadState('networkidle');
+        await this.page.waitForLoadState();
         
         // Wait for checkout buttons to be available
         await this.page.waitForSelector('#cart_checkout1, #cart_checkout2', { timeout: 10000 });
