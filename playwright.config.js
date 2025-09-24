@@ -1,7 +1,6 @@
 // @ts-check
 const { defineConfig, devices } = require('@playwright/test');
 const config = require('./config/config.js');
-// https://playwright.dev/docs/test-configuration
 
 module.exports = defineConfig({
   testDir: './tests',
@@ -17,17 +16,8 @@ module.exports = defineConfig({
     trace: 'on-first-retry',
   },
 
-  /* Configure projects for major browsers */
   projects: [
-    {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-    },
+  { name: 'all', testMatch: /.*\.js/ } // matches both setup.js and spec.js
+]
 
-    
-
-  ],
-
-  
 });
-

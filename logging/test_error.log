@@ -1,0 +1,134 @@
+2025-09-23T19:16:54+05:30 [error]: Login fixture setup failed: locator.click: Test ended.
+Call log:
+[2m  - waiting for getByRole('link', { name: 'Login or register' })[22m
+
+2025-09-23T19:16:56+05:30 [error]: Login fixture setup failed: locator.click: Test ended.
+Call log:
+[2m  - waiting for getByRole('link', { name: 'Login or register' })[22m
+
+2025-09-23T19:17:07+05:30 [error]: Login fixture setup failed: locator.click: Test ended.
+Call log:
+[2m  - waiting for getByRole('link', { name: 'Login or register' })[22m
+
+2025-09-23T19:17:08+05:30 [error]: Login fixture setup failed: locator.click: Test ended.
+Call log:
+[2m  - waiting for getByRole('link', { name: 'Login or register' })[22m
+
+2025-09-23T19:17:21+05:30 [error]: Login fixture setup failed: locator.click: Test ended.
+Call log:
+[2m  - waiting for getByRole('link', { name: 'Login or register' })[22m
+
+2025-09-23T19:17:28+05:30 [error]: Login fixture setup failed: locator.click: Test ended.
+Call log:
+[2m  - waiting for getByRole('link', { name: 'Login or register' })[22m
+
+2025-09-23T19:17:28+05:30 [error]: Login fixture setup failed: locator.click: Test ended.
+Call log:
+[2m  - waiting for getByRole('link', { name: 'Login or register' })[22m
+
+2025-09-23T19:17:39+05:30 [error]: Login fixture setup failed: locator.click: Test ended.
+Call log:
+[2m  - waiting for getByRole('link', { name: 'Login or register' })[22m
+
+2025-09-23T19:18:01+05:30 [error]: Login fixture setup failed: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('link', { name: 'Login or register' })[22m
+
+2025-09-23T19:18:12+05:30 [error]: Login fixture setup failed: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('link', { name: 'Login or register' })[22m
+
+2025-09-23T19:18:38+05:30 [error]: Login fixture setup failed: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('link', { name: 'Login or register' })[22m
+
+2025-09-23T19:18:39+05:30 [error]: Login fixture setup failed: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('link', { name: 'Login or register' })[22m
+
+2025-09-23T19:18:54+05:30 [error]: Login fixture setup failed: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('link', { name: 'Login or register' })[22m
+
+2025-09-23T19:18:54+05:30 [error]: Login fixture setup failed: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('link', { name: 'Login or register' })[22m
+
+2025-09-23T19:18:54+05:30 [error]: Login fixture setup failed: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('link', { name: 'Login or register' })[22m
+
+2025-09-23T19:19:09+05:30 [error]: Login fixture setup failed: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('link', { name: 'Login or register' })[22m
+
+2025-09-23T19:19:12+05:30 [error]: Login fixture setup failed: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('link', { name: 'Login or register' })[22m
+
+2025-09-23T19:19:29+05:30 [error]: Login fixture setup failed: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('link', { name: 'Login or register' })[22m
+
+2025-09-23T19:19:41+05:30 [error]: Login fixture setup failed: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('link', { name: 'Login or register' })[22m
+
+2025-09-23T19:19:53+05:30 [error]: Login fixture setup failed: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('link', { name: 'Login or register' })[22m
+
+2025-09-23T19:45:55+05:30 [error]: Login fixture setup failed: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('link', { name: 'Login or register' })[22m
+
+2025-09-23T19:49:16+05:30 [error]: Login fixture setup failed: locator.click: Test ended.
+Call log:
+[2m  - waiting for getByRole('link', { name: 'Login or register' })[22m
+
+2025-09-23T19:51:49+05:30 [error]: Login fixture setup failed: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('link', { name: 'Login or register' })[22m
+
+2025-09-23T19:56:24+05:30 [error]: Login fixture setup failed: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('link', { name: 'Login or register' }) to be visible[22m
+
+2025-09-23T19:57:46+05:30 [error]: Login fixture setup failed: Error reading storage state from C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json:
+ENOENT: no such file or directory, open 'C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json'
+2025-09-23T20:34:53+05:30 [error]: Login fixture setup failed: Error reading storage state from C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json:
+ENOENT: no such file or directory, open 'C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json'
+2025-09-23T20:34:53+05:30 [error]: Login fixture setup failed: Error reading storage state from C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json:
+ENOENT: no such file or directory, open 'C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json'
+2025-09-23T20:34:53+05:30 [error]: Login fixture setup failed: Error reading storage state from C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json:
+ENOENT: no such file or directory, open 'C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json'
+2025-09-23T20:34:55+05:30 [error]: Login fixture setup failed: Error reading storage state from C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json:
+ENOENT: no such file or directory, open 'C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json'
+2025-09-23T20:34:56+05:30 [error]: Login fixture setup failed: Error reading storage state from C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json:
+ENOENT: no such file or directory, open 'C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json'
+2025-09-23T20:34:56+05:30 [error]: Login fixture setup failed: Error reading storage state from C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json:
+ENOENT: no such file or directory, open 'C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json'
+2025-09-23T20:34:58+05:30 [error]: Login fixture setup failed: Error reading storage state from C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json:
+ENOENT: no such file or directory, open 'C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json'
+2025-09-23T20:34:58+05:30 [error]: Login fixture setup failed: Error reading storage state from C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json:
+ENOENT: no such file or directory, open 'C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json'
+2025-09-23T20:34:58+05:30 [error]: Login fixture setup failed: Error reading storage state from C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json:
+ENOENT: no such file or directory, open 'C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json'
+2025-09-23T20:35:00+05:30 [error]: Login fixture setup failed: Error reading storage state from C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json:
+ENOENT: no such file or directory, open 'C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json'
+2025-09-23T20:35:01+05:30 [error]: Login fixture setup failed: Error reading storage state from C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json:
+ENOENT: no such file or directory, open 'C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json'
+2025-09-23T20:35:01+05:30 [error]: Login fixture setup failed: Error reading storage state from C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json:
+ENOENT: no such file or directory, open 'C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json'
+2025-09-23T20:35:03+05:30 [error]: Login fixture setup failed: Error reading storage state from C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json:
+ENOENT: no such file or directory, open 'C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json'
+2025-09-23T20:35:03+05:30 [error]: Login fixture setup failed: Error reading storage state from C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json:
+ENOENT: no such file or directory, open 'C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json'
+2025-09-23T20:35:03+05:30 [error]: Login fixture setup failed: Error reading storage state from C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json:
+ENOENT: no such file or directory, open 'C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json'
+2025-09-23T20:36:59+05:30 [error]: Login fixture setup failed: Error reading storage state from C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json:
+ENOENT: no such file or directory, open 'C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json'
+2025-09-23T20:37:06+05:30 [error]: Login fixture setup failed: Error reading storage state from C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json:
+ENOENT: no such file or directory, open 'C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json'
+2025-09-23T20:37:12+05:30 [error]: Login fixture setup failed: Error reading storage state from C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json:
+ENOENT: no such file or directory, open 'C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json'

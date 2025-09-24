@@ -1,0 +1,81 @@
+2025-09-23T20:37:01+05:30 [error]: Login fixture setup failed: Error reading storage state from C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json:
+ENOENT: no such file or directory, open 'C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json'
+2025-09-23T20:37:03+05:30 [error]: Login fixture setup failed: Error reading storage state from C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json:
+ENOENT: no such file or directory, open 'C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json'
+2025-09-23T20:37:07+05:30 [error]: Login fixture setup failed: Error reading storage state from C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json:
+ENOENT: no such file or directory, open 'C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json'
+2025-09-23T20:37:09+05:30 [error]: Login fixture setup failed: Error reading storage state from C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json:
+ENOENT: no such file or directory, open 'C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json'
+2025-09-23T20:37:10+05:30 [error]: Login fixture setup failed: Error reading storage state from C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json:
+ENOENT: no such file or directory, open 'C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json'
+2025-09-23T20:37:13+05:30 [error]: Login fixture setup failed: Error reading storage state from C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json:
+ENOENT: no such file or directory, open 'C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json'
+2025-09-23T20:37:13+05:30 [error]: Login fixture setup failed: Error reading storage state from C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json:
+ENOENT: no such file or directory, open 'C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json'
+2025-09-23T20:37:15+05:30 [error]: Login fixture setup failed: Error reading storage state from C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json:
+ENOENT: no such file or directory, open 'C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json'
+2025-09-23T20:37:15+05:30 [error]: Login fixture setup failed: Error reading storage state from C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json:
+ENOENT: no such file or directory, open 'C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json'
+2025-09-23T20:37:16+05:30 [error]: Login fixture setup failed: Error reading storage state from C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json:
+ENOENT: no such file or directory, open 'C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json'
+2025-09-23T20:37:18+05:30 [error]: Login fixture setup failed: Error reading storage state from C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json:
+ENOENT: no such file or directory, open 'C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json'
+2025-09-23T20:37:19+05:30 [error]: Login fixture setup failed: Error reading storage state from C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json:
+ENOENT: no such file or directory, open 'C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\storeLoginContext\storageState.json'
+2025-09-24T07:12:44+05:30 [error]: Failed to navigate to random category: page.goto: Target page, context or browser has been closed
+Call log:
+[2m  - navigating to "https://automationteststore.com/", waiting until "load"[22m
+
+2025-09-24T07:12:44+05:30 [error]: Failed to perform random category navigation: page.goto: Target page, context or browser has been closed
+Call log:
+[2m  - navigating to "https://automationteststore.com/", waiting until "load"[22m
+
+2025-09-24T07:12:45+05:30 [error]: Failed to select multiple random categories: page.goto: Target page, context or browser has been closed
+Call log:
+[2m  - navigating to "https://automationteststore.com/", waiting until "load"[22m
+
+2025-09-24T07:12:46+05:30 [error]: Failed to navigate to random category: page.waitForLoadState: Target page, context or browser has been closed
+2025-09-24T07:13:44+05:30 [error]: Failed to navigate to random category: locator.click: Test ended.
+Call log:
+[2m  - waiting for getByRole('link', { name: 'Men' })[22m
+
+2025-09-24T07:13:44+05:30 [error]: Failed to navigate to random category: locator.click: Test ended.
+Call log:
+[2m  - waiting for getByRole('link', { name: 'Apparel & accessories' })[22m
+
+2025-09-24T07:13:44+05:30 [error]: Failed to perform random category navigation: locator.click: Test ended.
+Call log:
+[2m  - waiting for getByRole('link', { name: 'Apparel & accessories' })[22m
+
+2025-09-24T07:13:45+05:30 [error]: Failed to select multiple random categories: page.waitForLoadState: Test ended.
+2025-09-24T07:22:26+05:30 [error]: Failed to navigate to random category: locator.click: Error: strict mode violation: getByRole('link', { name: 'Men' }) resolved to 2 elements:
+    1) <a href="https://automationteststore.com/index.php?rt=product/category&path=58">  Men</a> aka getByRole('link', { name: 'Men', exact: true })
+    2) <a class="prdocutname" title="Absolute Anti-Age Spot Replenishing Unifying TreatmentSPF 15" href="https://automationteststore.com/index.php?rt=product/product&product_id=68">Absolute Anti-Age Spot Replenishing Unifying Trea…</a> aka getByRole('link', { name: 'Absolute Anti-Age Spot' })
+
+Call log:
+[2m  - waiting for getByRole('link', { name: 'Men' })[22m
+
+2025-09-24T09:23:07+05:30 [error]: Error checking product 2: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('.thumbnail').nth(15).locator('a').first()[22m
+[2m    - locator resolved to <a href="https://automationteststore.com/index.php?rt=product/product&path=49&product_id=104">…</a>[22m
+[2m  - attempting click action[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is not visible[22m
+[2m    - retrying click action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is not visible[22m
+[2m    - retrying click action[22m
+[2m      - waiting 100ms[22m
+[2m    25 × waiting for element to be visible, enabled and stable[22m
+[2m       - element is not visible[22m
+[2m     - retrying click action[22m
+[2m       - waiting 500ms[22m
+
+2025-09-24T09:23:07+05:30 [error]: Error checking product 3: locator.count: Target page, context or browser has been closed
+2025-09-24T09:35:19+05:30 [error]: Error during attempt 1: page.goBack: Test ended.
+Call log:
+[2m  - waiting for navigation until "load"[22m
+[2m    - navigated to "https://automationteststore.com/index.php?rt=product/category&path=49"[22m
+

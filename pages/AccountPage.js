@@ -3,7 +3,7 @@ class AccountPage extends BasePage {
     constructor(page) {
         super(page);
         
-        this.accountHeading = page.getByRole('heading', { name: 'My Account', exact: true });
+        this.accountHeading = page.getByRole('heading', { name: 'My Account', exact: true }).first();
         this.welcomeMessage = page.getByText(/Welcome back/);
         this.logoffLink = page.getByRole('link', { name: 'Logoff', exact: true });
         

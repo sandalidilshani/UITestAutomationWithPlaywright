@@ -16,10 +16,6 @@ class LoginPage extends BasePage {
     }
 
 
-    async navigate() {
-        await this.navigateTo(`${this.baseUrl}/index.php?rt=account/login`);
-    }
-
     
     async login(username, password) {
         await this.loginNameInput.fill(username);
