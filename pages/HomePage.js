@@ -44,7 +44,6 @@ class HomePage extends BasePage {
     }
 
     async clickLoginOrRegister() {
-        await this.loginOrRegisterLink.waitFor({ state: 'visible', timeout: 10000 });
         await this.loginOrRegisterLink.click();
     }
 

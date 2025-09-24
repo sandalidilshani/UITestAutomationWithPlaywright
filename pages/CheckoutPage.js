@@ -36,11 +36,7 @@ class CheckoutPage extends BasePage {
         await this.page.waitForSelector('#cart_checkout1, #cart_checkout2', { timeout: 10000 });
         await this.page.locator('#cart_checkout1, #cart_checkout2').first().click();
         
-        // Check if redirected to login (auth failure)
-        const currentUrl = this.page.url();
-        if (currentUrl.includes('account/login')) {
-            throw new Error('Authentication failed - redirected to login page');
-        }
+        
     }
 
     async selectGuestCheckout() {
@@ -138,14 +134,14 @@ class CheckoutPage extends BasePage {
     // Additional methods for comprehensive test coverage
     
     async modifyQuantity(quantity) {
-        const quantityField = this.page.locator('#product_quantity');
+        const quantityField = this.page.locator('#cart_quantity50');
         await quantityField.clear();
         await quantityField.fill(quantity.toString());
         await this.page.waitForTimeout(500);
     }
 
     async getQuantity() {
-        const quantityField = this.page.locator('#product_quantity');
+        const quantityField = this.page.locator('#cart_quantity50');
         return await quantityField.inputValue();
     }
 

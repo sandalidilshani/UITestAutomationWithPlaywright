@@ -61,9 +61,9 @@ const test = base.extend({
 
       
       async addProductToCartWithLogin(productData, quantity = 1, options = {}) {
+        await homePage.navigate();
         await homePage.clickLoginOrRegister();
         await loginPage.login(config.credentials.username, config.credentials.password);
-        await homePage.navigate();
         expect(await homePage.isUserLoggedIn()).toBeTruthy();
         
         await productPage.navigateToProduct(productData.id);
