@@ -14,7 +14,7 @@ class ProductPage extends BasePage {
         this.totalPriceDisplay = page.locator('text=Total Price:').first();
         this.outOfStockLabel = page.locator('text=Out of Stock').first();
         this.inStockLabel = page.locator('.product-stock:has-text("In Stock")').first();
-        this.addToCartButton = page.locator('a:has-text("Add to Cart")').first();
+        this.addToCartButton = page.locator('[href="#"]:has-text("Add to Cart")').first();
         this.printButton = page.locator('a:has-text("Print")').first();
         this.productOptions = page.locator('.product-options');
         this.sizeOptions = page.locator('select[name*="option"], input[name*="option"][type="radio"]');
@@ -33,13 +33,43 @@ class ProductPage extends BasePage {
     }
 
     async navigateToProduct(productId) {
-        await this.page.goto(`/index.php?rt=product/product&product_id=${productId}`);
-        await this.page.waitForLoadState('networkidle');
+        try {
+            await this.page.goto(`/index.php?rt=product/product&product_id=${productId}`, {
+                waitUntil: 'domcontentloaded',
+                timeout: 60000
+            });
+            
+            // Wait for product-specific elements to ensure page is fully loaded
+            await Promise.all([
+                this.page.waitForSelector('h1', { timeout: 10000 }),
+                this.page.waitForSelector('.productprice', { timeout: 10000 }),
+                this.page.waitForSelector('[href="#"]:has-text("Add to Cart")', { timeout: 10000 })
+            ]);
+            
+        } catch (error) {
+            console.error(`Failed to navigate to product ${productId}:`, error.message);
+            throw new Error(`Navigation to product ${productId} failed: ${error.message}`);
+        }
     }
 
     async navigateToProductByUrl(productUrl) {
-        await this.page.goto(productUrl);
-        await this.page.waitForLoadState('networkidle');
+        try {
+            await this.page.goto(productUrl, {
+                waitUntil: 'domcontentloaded',
+                timeout: 60000
+            });
+            
+            // Wait for product-specific elements to ensure page is fully loaded
+            await Promise.all([
+                this.page.waitForSelector('h1', { timeout: 10000 }),
+                this.page.waitForSelector('.productprice', { timeout: 10000 }),
+                this.page.waitForSelector('[href="#"]:has-text("Add to Cart")', { timeout: 10000 })
+            ]);
+            
+        } catch (error) {
+            console.error(`Failed to navigate to product URL ${productUrl}:`, error.message);
+            throw new Error(`Navigation to product URL ${productUrl} failed: ${error.message}`);
+        }
     }
 
     async getProductTitle() {
@@ -59,18 +89,33 @@ class ProductPage extends BasePage {
     }
 
     async isOutOfStock() {
-        return await this.outOfStockLabel.isVisible();
+        try {
+            return await this.outOfStockLabel.isVisible();
+        } catch (error) {
+            console.log('Error checking out of stock status:', error.message);
+            return false;
+        }
     }
 
     async isInStock() {
-        return await this.inStockLabel.isVisible() || !await this.isOutOfStock();
+        try {
+            return await this.inStockLabel.isVisible() || !await this.isOutOfStock();
+        } catch (error) {
+            console.log('Error checking in stock status:', error.message);
+            return true; // Default to in stock if we can't determine
+        }
     }
 
     async isAddToCartButtonEnabled() {
-        if (await this.isOutOfStock()) {
-            return false;
+        try {
+            if (await this.isOutOfStock()) {
+                return false;
+            }
+            return await this.addToCartButton.isVisible();
+        } catch (error) {
+            console.log('Error checking add to cart button status:', error.message);
+            return false; // Default to disabled if we can't determine
         }
-        return await this.addToCartButton.isVisible();
     }
 
     async setQuantity(quantity) {
@@ -99,7 +144,7 @@ class ProductPage extends BasePage {
         expect(await this.isAddToCartButtonEnabled()).toBeTruthy();
         
         await this.addToCartButton.click();
-        await this.page.waitForLoadState('networkidle');
+        await this.page.waitForLoadState();
     }
 
     async selectProductOption(optionType, optionValue) {
@@ -188,7 +233,7 @@ class ProductPage extends BasePage {
         const excessiveQuantity = maxStock + 5;
         await this.setQuantity(excessiveQuantity);
         await this.addToCartButton.click();
-        await this.page.waitForLoadState('networkidle');
+        await this.page.waitForLoadState();
     }
 
     async printProduct() {

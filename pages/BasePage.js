@@ -5,8 +5,12 @@ class BasePage {
         this.baseUrl = config.app.baseUrl;
     }
     async navigateTo(url = this.baseUrl) {
-        await this.page.goto(url);
-    }
+        
+            await this.page.goto(url, { 
+                timeout: 60000  // Increase timeout to 60 seconds
+            });
+        }
+    
     async getTitle() {
         return await this.page.title();
     }

@@ -35,24 +35,25 @@ const test = base.extend({
       },
 
       async selectRandomProduct() {
-        const thumbnails = page.locator('.thumbnail');
-        const count = await thumbnails.count();
-
+        // Get all visible product links
+        const productLinks = page.locator('.thumbnail:visible a').first();
+        const count = await productLinks.count();
+      
         if (count === 0) {
-          throw new Error('No products found in thumbnails');
+          throw new Error('No products found');
         }
-
+      
         const randomIndex = Math.floor(Math.random() * count);
-        const selectedThumbnail = thumbnails.nth(randomIndex);
-
-        const productName = await selectedThumbnail.locator('..').locator('.prdocutname').first().textContent();
-
-        await selectedThumbnail.locator('a').first().click();
-        await page.waitForLoadState('networkidle');
-
+        const selectedLink = productLinks.nth(randomIndex);
+      
+        // Get product name from the parent thumbnail
+        const productName = await selectedLink.locator('xpath=..').locator('.prdocutname').first().textContent();
+      
+        await selectedLink.click();
+        await page.waitForLoadState();
+      
         return productName.trim();
       },
-
       // Function to find out-of-stock products across categories
       async findOutOfStockProduct() {
         logger.info('Starting search for out-of-stock products');
@@ -85,7 +86,7 @@ const test = base.extend({
               
               // Click on the product to check its details
               await thumbnail.locator('a').first().click();
-              await page.waitForLoadState('networkidle');
+              await page.waitForLoadState();
               
               // Check if product is out of stock
               const isOutOfStock = await productPage.isOutOfStock();
@@ -101,7 +102,7 @@ const test = base.extend({
               
               // Go back to category page to check next product
               await page.goBack();
-              await page.waitForLoadState('networkidle');
+              await page.waitForLoadState();
             }
             
             logger.info(`No out-of-stock products found in category: ${categoryName}`);
@@ -136,7 +137,7 @@ const test = base.extend({
             const categoryName = await categories.nth(i).textContent();
             if (categoryName.trim().toLowerCase().includes(targetCategoryName.toLowerCase())) {
               await categories.nth(i).click();
-              await page.waitForLoadState('networkidle');
+              await page.waitForLoadState();
               categoryFound = true;
               logger.info(`Navigated to category: ${categoryName.trim()}`);
               break;
@@ -174,7 +175,7 @@ const test = base.extend({
             
             // Click on the product to check its details
             await thumbnail.locator('a').first().click();
-            await page.waitForLoadState('networkidle');
+            await page.waitForLoadState();
             
             // Check if product is out of stock
             const isOutOfStock = await productPage.isOutOfStock();
@@ -190,7 +191,7 @@ const test = base.extend({
             
             // Go back to category page to check next product
             await page.goBack();
-            await page.waitForLoadState('networkidle');
+            await page.waitForLoadState();
           }
           
           logger.info(`No out-of-stock products found in category: ${targetCategoryName}`);

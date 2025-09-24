@@ -10,3 +10,5 @@ Call log:
 Call log:
 [2m  - navigating to "https://automationteststore.com/", waiting until "load"[22m
 
+2025-09-24T22:14:52+05:30 [error]: Error during attempt 1: page.waitForLoadState: Test timeout of 30000ms exceeded.
+2025-09-24T22:25:19+05:30 [error]: Error during attempt 1: page.waitForLoadState: Test timeout of 60000ms exceeded.

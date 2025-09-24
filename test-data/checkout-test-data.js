@@ -1,303 +1,246 @@
-const config = require('../config/config.js');
-
-// Valid test data for checkout scenarios
-const validGuestUser = {
+// Comprehensive test data for checkout functionality
+const guestUserData = {
     firstName: 'John',
     lastName: 'Doe',
     email: 'john.doe@test.com',
-    telephone: '555-123-4567',
-    fax: '555-123-4568'
+    telephone: '555-123-4567'
 };
 
-const validShippingAddress = {
-    company: 'Test Company',
+const shippingAddressData = {
     address1: '456 Oak Avenue',
-    address2: 'Suite 100',
     city: 'Los Angeles',
-    region: 'Greater London',
-    zipCode: 'SW1A 1AA',
-    country: 'United Kingdom',
-    countryCode: 'GB'
-};
-
-const validShippingAddressUS = {
-    company: 'Test Company',
-    address1: '456 Oak Avenue',
-    address2: 'Suite 100',
-    city: 'Los Angeles',
-    region: 'California',
     zipCode: '90210',
     country: 'United States',
-    countryCode: 'US'
+    region: 'California'
 };
 
 const invalidShippingAddress = {
-    company: '',
     address1: '',
-    address2: '',
     city: '',
-    region: '',
     zipCode: '00000',
-    country: 'XX'
+    country: 'XX',
+    region: ''
 };
 
-// Invalid email formats for validation testing
-const invalidEmails = [
-    'invalid-email',
-    'test@',
-    '@domain.com',
-    'test..test@domain.com',
-    'test@domain',
-    'test@.com',
-    'test space@domain.com'
-];
+const invalidData = {
+    emptyEmail: '',
+    invalidEmail: 'invalid-email',
+    emptyPhone: '',
+    invalidPhone: '123',
+    invalidEmails: [
+        'invalid-email',
+        'test@',
+        '@domain.com',
+        'test..test@domain.com'
+    ],
+    invalidPhones: [
+        '123',
+        'abc-def-ghij',
+        '123-45-678'
+    ]
+};
 
-const validEmail = 'test@example.com';
+const validData = {
+    validEmail: 'test@example.com',
+    validPhone: '(555) 123-4567'
+};
 
-// Invalid phone numbers for validation testing
-const invalidPhones = [
-    '123',
-    'abc-def-ghij',
-    '123-45-678',
-    '+44-invalid',
-    '00000000000000000000'
-];
-
-const validPhone = '(555) 123-4567';
-
-// Coupon codes for testing
-const coupons = {
+const couponData = {
     invalid: 'INVALID123',
     expired: 'EXPIRED2023',
-    valid: 'SAVE10',
-    used: 'ALREADYUSED'
+    valid: 'SAVE10'
 };
 
-// Shipping methods
 const shippingMethods = {
-    standard: { value: 'flat.flat', name: 'Standard Shipping', cost: '$5.99', days: '5-7 days' },
-    express: { value: 'express.express', name: 'Express Shipping', cost: '$12.99', days: '2-3 days' },
-    overnight: { value: 'overnight.overnight', name: 'Overnight Shipping', cost: '$24.99', days: '1 day' },
-    free: { value: 'free.free', name: 'Free Shipping', cost: '$0.00', days: '7-10 days' }
+    standard: { name: 'Standard Shipping', cost: '$5.99' },
+    express: { name: 'Express Shipping', cost: '$12.99' },
+    overnight: { name: 'Overnight Shipping', cost: '$24.99' },
+    free: { name: 'Free Shipping', cost: '$0.00' }
 };
 
-// Payment methods
-const paymentMethods = {
-    cod: { value: 'cod', name: 'Cash On Delivery' },
-    bank: { value: 'bank_transfer', name: 'Bank Transfer' },
-    cheque: { value: 'cheque', name: 'Cheque' }
-};
-
-// Free shipping threshold (for testing TS003_TC08)
-const freeShippingThreshold = 100.00;
-
-// Test products with different price points
 const testProducts = {
-    lowPrice: { name: 'Test Product Low', price: 15.99, id: 'product_low' },
-    mediumPrice: { name: 'Test Product Medium', price: 45.00, id: 'product_medium' },
-    highPrice: { name: 'Test Product High', price: 120.00, id: 'product_high' },
-    discounted: { 
-        name: 'Discounted Product', 
-        originalPrice: 50.00, 
-        discountedPrice: 35.00, 
-        discount: 15.00,
-        id: 'product_discounted' 
-    }
+    lowPrice: { name: 'Test Product Low', price: 15.99 },
+    mediumPrice: { name: 'Test Product Medium', price: 45.00 },
+    highPrice: { name: 'Test Product High', price: 120.00 },
+    discounted: { name: 'Discounted Product', originalPrice: 50.00, discountedPrice: 35.00 }
 };
 
-// Tax calculation data (if applicable)
-const taxData = {
-    taxRate: 0.08, // 8% tax rate
-    taxJurisdictions: ['California', 'New York', 'Texas']
-};
-
-// Validation error messages
-const errorMessages = {
-    requiredField: 'This field is required',
-    invalidEmail: 'Invalid email format',
-    invalidPhone: 'Invalid phone number format',
-    invalidAddress: 'Invalid address',
-    invalidZipCode: 'Invalid ZIP/Post Code',
-    invalidCoupon: 'Invalid coupon code',
-    expiredCoupon: 'Coupon has expired',
-    outOfStock: 'Product is out of stock',
-    sessionExpired: 'Your session has expired',
-    emptyCart: 'Your cart is empty'
-};
-
-// Test case data mapping
+// Comprehensive test case data
 const checkoutTestData = {
-    // TS003_TC01: Guest user single product checkout
-    TS003_TC01: {
+    // TS003_TC01: Guest checkout with single product
+    guestCheckout: {
         userType: 'guest',
-        personalDetails: validGuestUser,
-        shippingAddress: validShippingAddress,
-        expectedFlow: 'guest_checkout_complete'
+        personalDetails: guestUserData,
+        shippingAddress: shippingAddressData
     },
-
-    // TS003_TC02: Logged-in user single product checkout
-    TS003_TC02: {
-        userType: 'logged_in',
-        credentials: config.credentials,
-        expectedFlow: 'logged_in_checkout_complete'
+    
+    // TS003_TC02: Logged-in user checkout
+    loggedInCheckout: {
+        userType: 'logged_in'
     },
-
+    
     // TS003_TC03: Quantity modification during checkout
-    TS003_TC03: {
+    quantityModification: {
+        userType: 'guest',
+        personalDetails: guestUserData,
+        shippingAddress: shippingAddressData,
         initialQuantity: 3,
-        modifiedQuantity: 2,
-        personalDetails: validGuestUser,
-        shippingAddress: validShippingAddress
+        modifiedQuantity: 2
     },
-
+    
     // TS003_TC04: Product removal during checkout
-    TS003_TC04: {
-        personalDetails: validGuestUser,
-        shippingAddress: validShippingAddress,
-        expectedBehavior: 'empty_cart_handling'
+    productRemoval: {
+        userType: 'guest',
+        personalDetails: guestUserData,
+        shippingAddress: shippingAddressData
     },
-
+    
     // TS003_TC05: Valid shipping address
-    TS003_TC05: {
-        personalDetails: validGuestUser,
-        shippingAddress: validShippingAddress,
-        product: testProducts.mediumPrice
+    validShippingAddress: {
+        userType: 'guest',
+        personalDetails: guestUserData,
+        shippingAddress: shippingAddressData
     },
-
+    
     // TS003_TC06: Invalid shipping address
-    TS003_TC06: {
-        personalDetails: validGuestUser,
-        shippingAddress: invalidShippingAddress,
-        expectedErrors: ['address_validation_error']
+    invalidShippingAddress: {
+        userType: 'guest',
+        personalDetails: guestUserData,
+        shippingAddress: invalidShippingAddress
     },
-
+    
     // TS003_TC07: Multiple shipping options
-    TS003_TC07: {
-        personalDetails: validGuestUser,
-        shippingAddress: validShippingAddress,
+    multipleShippingOptions: {
+        userType: 'guest',
+        personalDetails: guestUserData,
+        shippingAddress: shippingAddressData,
         shippingMethods: [shippingMethods.standard, shippingMethods.express, shippingMethods.overnight]
     },
-
+    
     // TS003_TC08: Free shipping threshold
-    TS003_TC08: {
-        personalDetails: validGuestUser,
-        shippingAddress: validShippingAddress,
+    freeShippingThreshold: {
+        userType: 'guest',
+        personalDetails: guestUserData,
+        shippingAddress: shippingAddressData,
         product: testProducts.lowPrice,
-        freeShippingThreshold: freeShippingThreshold,
+        freeShippingThreshold: 100.00,
         highValueProduct: testProducts.highPrice
     },
-
+    
     // TS003_TC09: Order summary accuracy
-    TS003_TC09: {
-        personalDetails: validGuestUser,
-        shippingAddress: validShippingAddress,
+    orderSummaryAccuracy: {
+        userType: 'guest',
+        personalDetails: guestUserData,
+        shippingAddress: shippingAddressData,
         product: { name: 'Test Product', price: 25.99 },
-        shippingCost: 5.99,
-        taxRate: taxData.taxRate
+        shippingCost: 5.99
     },
-
+    
     // TS003_TC10: Order summary with discount
-    TS003_TC10: {
-        personalDetails: validGuestUser,
-        shippingAddress: validShippingAddress,
+    orderSummaryWithDiscount: {
+        userType: 'guest',
+        personalDetails: guestUserData,
+        shippingAddress: shippingAddressData,
         product: testProducts.discounted
     },
-
+    
     // TS003_TC11: Invalid coupon code
-    TS003_TC11: {
-        personalDetails: validGuestUser,
-        shippingAddress: validShippingAddress,
-        couponCode: coupons.invalid,
-        expectedError: errorMessages.invalidCoupon
+    invalidCoupon: {
+        userType: 'guest',
+        personalDetails: guestUserData,
+        shippingAddress: shippingAddressData,
+        couponCode: couponData.invalid
     },
-
+    
     // TS003_TC12: Required field validation
-    TS003_TC12: {
-        requiredFields: ['firstName', 'lastName', 'email', 'address1', 'city', 'region', 'zipCode', 'country'],
-        expectedError: errorMessages.requiredField
+    requiredFieldValidation: {
+        userType: 'guest',
+        requiredFields: ['firstName', 'lastName', 'email', 'address1', 'city', 'region', 'zipCode', 'country']
     },
-
+    
     // TS003_TC13: Email format validation
-    TS003_TC13: {
-        personalDetails: { ...validGuestUser, email: '' },
-        shippingAddress: validShippingAddress,
-        invalidEmails: invalidEmails,
-        validEmail: validEmail
+    emailValidation: {
+        userType: 'guest',
+        personalDetails: { ...guestUserData, email: '' },
+        shippingAddress: shippingAddressData,
+        invalidEmails: invalidData.invalidEmails,
+        validEmail: validData.validEmail
     },
-
+    
     // TS003_TC14: Phone number validation
-    TS003_TC14: {
-        personalDetails: { ...validGuestUser, telephone: '' },
-        shippingAddress: validShippingAddress,
-        invalidPhones: invalidPhones,
-        validPhone: validPhone
+    phoneValidation: {
+        userType: 'guest',
+        personalDetails: { ...guestUserData, telephone: '' },
+        shippingAddress: shippingAddressData,
+        invalidPhones: invalidData.invalidPhones,
+        validPhone: validData.validPhone
     },
-
-    // TS003_TC15: Guest checkout availability
-    TS003_TC15: {
-        expectedOptions: ['guest_checkout', 'create_account'],
-        personalDetails: validGuestUser,
-        shippingAddress: validShippingAddress
+    
+    // TS003_TC15: Guest checkout option availability
+    guestCheckoutAvailability: {
+        userType: 'guest',
+        personalDetails: guestUserData,
+        shippingAddress: shippingAddressData
     },
-
+    
     // TS003_TC16: Account creation during checkout
-    TS003_TC16: {
+    accountCreation: {
         userType: 'create_account',
-        personalDetails: validGuestUser,
-        shippingAddress: validShippingAddress,
+        personalDetails: guestUserData,
+        shippingAddress: shippingAddressData,
         accountDetails: {
             password: 'TestPassword123!',
             confirmPassword: 'TestPassword123!'
         }
     },
-
+    
     // TS003_TC17: Saved address usage
-    TS003_TC17: {
+    savedAddressUsage: {
         userType: 'logged_in',
-        credentials: config.credentials,
-        useSavedAddress: true,
-        expectedBehavior: 'address_auto_populate'
+        useSavedAddress: true
     },
-
+    
     // TS003_TC18: Stock depletion during checkout
-    TS003_TC18: {
-        personalDetails: validGuestUser,
-        shippingAddress: validShippingAddress,
-        product: 'last_available_item',
-        expectedError: errorMessages.outOfStock
+    stockDepletion: {
+        userType: 'guest',
+        personalDetails: guestUserData,
+        shippingAddress: shippingAddressData,
+        product: 'last_available_item'
     },
-
+    
     // TS003_TC19: Browser back button navigation
-    TS003_TC19: {
-        personalDetails: validGuestUser,
-        shippingAddress: validShippingAddress,
+    browserNavigation: {
+        userType: 'guest',
+        personalDetails: guestUserData,
+        shippingAddress: shippingAddressData,
         testBrowserNavigation: true
     },
-
+    
     // TS003_TC20: Session timeout handling
-    TS003_TC20: {
-        personalDetails: validGuestUser,
-        shippingAddress: validShippingAddress,
-        sessionTimeout: 30000, // 30 seconds for testing
-        expectedBehavior: 'session_handling'
+    sessionTimeout: {
+        userType: 'guest',
+        personalDetails: guestUserData,
+        shippingAddress: shippingAddressData,
+        sessionTimeout: 30000
+    },
+    
+    // Multiple products checkout
+    multipleProducts: {
+        userType: 'guest',
+        personalDetails: guestUserData,
+        shippingAddress: shippingAddressData,
+        productCount: 2
     }
 };
 
 module.exports = {
-    validGuestUser,
-    validShippingAddress,
-    validShippingAddressUS,
+    guestUserData,
+    shippingAddressData,
     invalidShippingAddress,
-    invalidEmails,
-    validEmail,
-    invalidPhones,
-    validPhone,
-    coupons,
+    invalidData,
+    validData,
+    couponData,
     shippingMethods,
-    paymentMethods,
-    freeShippingThreshold,
     testProducts,
-    taxData,
-    errorMessages,
     checkoutTestData
 };

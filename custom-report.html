@@ -24,11 +24,11 @@
 <body>
   <h1>Playwright — Custom HTML Report</h1>
   <div class="summary">
-    <strong>Started:</strong> Wed Sep 24 2025 19:53:27 GMT+0530 (India Standard Time)<br/>
-    <strong>Finished:</strong> Wed Sep 24 2025 19:54:00 GMT+0530 (India Standard Time)<br/>
-    <strong>Total:</strong> 1 &nbsp;&nbsp;
+    <strong>Started:</strong> Wed Sep 24 2025 22:38:32 GMT+0530 (India Standard Time)<br/>
+    <strong>Finished:</strong> Wed Sep 24 2025 22:39:04 GMT+0530 (India Standard Time)<br/>
+    <strong>Total:</strong> 3 &nbsp;&nbsp;
     <strong>Passed:</strong> 0 &nbsp;&nbsp;
-    <strong>Failed:</strong> 0 &nbsp;&nbsp;
+    <strong>Failed:</strong> 1 &nbsp;&nbsp;
     <strong>Skipped:</strong> 0
   </div>
 
@@ -46,13 +46,39 @@
     <tbody>
       
         <tr>
-          <td class="scenario"> › all › search.spec.js › Search Functionality Tests - Authenticated User</td>
-          <td class="case">TC002_016 - Verify search functionality consistency between guest and logged-in users (using stored context)</td>
+          <td class="scenario"> › all › Checkout.spec.js › Checkout Tests</td>
+          <td class="case">Logged-in user checkout</td>
+          <td class="status fail">failed</td>
+          <td class="duration">11263</td>
+          <td class="error"><details><summary>TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('link', { name: 'Login or register' }) to be visible[22m
+</summary><pre>TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('link', { name: 'Login or register' }) to be visible[22m
+
+    at HomePage.clickLoginOrRegister (C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\pages\HomePage.js:47:40)
+    at Object.addProductToCartWithLogin (C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\addProductToCartFixture.js:64:24)
+    at C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\tests\Checkout.spec.js:45:35</pre></details></td>
+          <td class="attachments"><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5CCheckout-Checkout-Tests-Logged-in-user-checkout-all%5Ctest-failed-1.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5CCheckout-Checkout-Tests-Logged-in-user-checkout-all%5Cvideo.webm" target="_blank">video</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5CCheckout-Checkout-Tests-Logged-in-user-checkout-all%5Ctrace.zip" target="_blank">trace</a></div></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › Checkout.spec.js › Checkout Tests</td>
+          <td class="case">Multiple products checkout</td>
           <td class="status skip">timedOut</td>
-          <td class="duration">31643</td>
-          <td class="error"><details><summary>[31mTest timeout of 30000ms exceeded while running &quot;beforeEach&quot; hook.[39m</summary><pre>[31mTest timeout of 30000ms exceeded while running &quot;beforeEach&quot; hook.[39m
-    at C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\tests\search.spec.js:267:10</pre></details></td>
-          <td class="attachments"><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Csearch-Search-Functionalit-13db4-users-using-stored-context--all%5Ctest-failed-1.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Csearch-Search-Functionalit-13db4-users-using-stored-context--all%5Cvideo.webm" target="_blank">video</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Csearch-Search-Functionalit-13db4-users-using-stored-context--all%5Ctrace.zip" target="_blank">trace</a></div></td>
+          <td class="duration">30499</td>
+          <td class="error"><details><summary>[31mTest timeout of 30000ms exceeded.[39m</summary><pre>[31mTest timeout of 30000ms exceeded.[39m</pre></details></td>
+          <td class="attachments"><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5CCheckout-Checkout-Tests-Multiple-products-checkout-all%5Ctest-failed-1.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5CCheckout-Checkout-Tests-Multiple-products-checkout-all%5Cvideo.webm" target="_blank">video</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5CCheckout-Checkout-Tests-Multiple-products-checkout-all%5Cerror-context.md" target="_blank">error-context</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5CCheckout-Checkout-Tests-Multiple-products-checkout-all%5Ctrace.zip" target="_blank">trace</a></div></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › Checkout.spec.js › Checkout Tests</td>
+          <td class="case">Guest checkout with single product</td>
+          <td class="status skip">timedOut</td>
+          <td class="duration">30499</td>
+          <td class="error"><details><summary>[31mTest timeout of 30000ms exceeded.[39m</summary><pre>[31mTest timeout of 30000ms exceeded.[39m</pre></details></td>
+          <td class="attachments"><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5CCheckout-Checkout-Tests-Guest-checkout-with-single-product-all%5Ctest-failed-1.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5CCheckout-Checkout-Tests-Guest-checkout-with-single-product-all%5Cvideo.webm" target="_blank">video</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5CCheckout-Checkout-Tests-Guest-checkout-with-single-product-all%5Cerror-context.md" target="_blank">error-context</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5CCheckout-Checkout-Tests-Guest-checkout-with-single-product-all%5Ctrace.zip" target="_blank">trace</a></div></td>
         </tr>
     </tbody>
   </table>

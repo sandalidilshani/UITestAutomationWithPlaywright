@@ -34,7 +34,7 @@ test.describe('TS003 - Add to Cart Functionality Tests', () => {
 
 
   test('TS003-TC001: Verify adding single product to cart as guest user', async ({ page }) => {
-    const specificProduct = cartTestData.specificProducts[0]; // Skinsheen Bronzer Stick
+    const specificProduct = cartTestData.specificProducts[0]; 
     await productPage.navigateToProduct(specificProduct.id);
     const productTitle = await productPage.getProductTitle();
     expect(productTitle).toContain(specificProduct.name);
@@ -148,12 +148,12 @@ test.describe('TS003 - Add to Cart Functionality Tests', () => {
   });
 
   
-  testWithFixture('TS003-TC008: Verify adding product with zero quantity', async ({ selectRandomProductCategoryFixture }) => {
+testWithFixture('TS003-TC008: Verify adding product with zero quantity', async ({ selectRandomProductCategoryFixture }) => {
     const { page, homePage } = selectRandomProductCategoryFixture;
     const selectedCategory = await selectRandomProductCategoryFixture.navigateToRandomCategoryFromSubnav();
     const selectedProduct = await selectRandomProductCategoryFixture.selectRandomProduct();
     
-    await productPage.verifyStockStatus(true);
+    expect(await productPage.isInStock()).toBeTruthy();
     await productPage.setQuantity(0);
     
     const isAddToCartEnabled = await productPage.isAddToCartButtonEnabled();
@@ -161,32 +161,39 @@ test.describe('TS003 - Add to Cart Functionality Tests', () => {
     
     if (isAddToCartEnabled) {
       await productPage.addToCartButton.click();
-      const cartInfo = await homePage.getCartInfo();
+      const cartInfo = await cartPage.getCartInfo();
       expect(cartInfo.itemCount).toBe(0);
     }
   });
 
-  test('TS003-TC009: Verify adding product with required options selected', async () => {
+  test('TS003-TC009: Verify adding product with required options selected', async ({ page }) => {
+    // Re-initialize page objects to ensure they're using the current page
+    const productPage = new ProductPage(page);
+    const cartPage = new CartPage(page);
+    
     const productWithOptions = cartTestData.productsWithOptions[0];
     await productPage.navigateToProduct(productWithOptions.id);
-     await productPage.selectSize("6 UK");
-     await productPage.selectColor("red");
+    await productPage.selectSize("6 UK");
+    await productPage.selectColor("red");
     await productPage.addToCart(1);
     await cartPage.navigateToCart();
     await cartPage.verifyProductInCart(productWithOptions.name, 1);
   });
 
-  test('TS003-TC010: Verify adding same product with different variations', async () => {
+  test('TS003-TC010: Verify adding same product with different variations', async ({ page }) => {
+    const productPage = new ProductPage(page);
+    const cartPage = new CartPage(page);
+    
     const productWithOptions = cartTestData.productsWithOptions[0];
 
     await productPage.navigateToProduct(productWithOptions.id);
-    await productPage.selectSize("Small");
-    await productPage.selectColor("Red");
+    await productPage.selectSize("3 UK");
+    await productPage.selectColor("red");
     await productPage.addToCart(1);
 
     await productPage.navigateToProduct(productWithOptions.id);
-    await productPage.selectSize("Large");
-    await productPage.selectColor("Blue");
+    await productPage.selectSize("6 UK");
+    await productPage.selectColor("red");
     await productPage.addToCart(1);
 
     await cartPage.navigateToCart();
@@ -205,7 +212,6 @@ test.describe('TS003 - Add to Cart Functionality Tests', () => {
     const cartPage = new CartPage(page);
     const homePage = new HomePage(page);
 
-    await loginPage.navigateToLoginPage();
     await loginPage.login(cartTestData.testUser.username, cartTestData.testUser.password);
 
     await productPage.navigateToProduct(testProduct.id);
