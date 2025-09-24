@@ -6,8 +6,7 @@ const { test, expect } = require('../fixtures/loginFixture');
 
 const authFile = path.join(__dirname, 'storeLoginContext', 'storageState.json');
 
-test.describe('Search Functionality Tests - Guest User', () => {
-    test.describe.configure({ tag: '@guest' });
+test.describe('Search Functionality Tests', () => {
     let homePage;
     let searchPage;
     test.beforeEach(async ({ loginFixture: page }) => {

@@ -4,80 +4,48 @@ const BasePage = require('./BasePage');
 class CheckoutPage extends BasePage {
     constructor(page) {
         super(page);
-        
-        // Login/Account Selection Page Elements
-        this.accountLoginTitle = page.locator('h1:has-text("Account Login")');
-        this.guestCheckoutRadio = page.locator('input[value="guest"]');
-        this.registerAccountRadio = page.locator('input[value="register"]');
-        this.continueButton = page.locator('button:has-text("Continue")');
-        this.loginButton = page.locator('button:has-text("Login")');
-        this.loginNameField = page.locator('input[name="loginname"]');
-        this.passwordField = page.locator('input[name="password"]');
-        
-        // Guest Checkout Step 1 - Personal Details & Address
-        this.guestStep1Title = page.locator('h1:has-text("Guest Checkout - Step 1")');
-        this.firstNameField = page.locator('#guestFrm_firstname');
-        this.lastNameField = page.locator('#guestFrm_lastname');
-        this.emailField = page.locator('#guestFrm_email');
-        this.telephoneField = page.locator('#guestFrm_telephone');
-        this.faxField = page.locator('#guestFrm_fax');
-        this.companyField = page.locator('#guestFrm_company');
-        this.address1Field = page.locator('#guestFrm_address_1');
-        this.address2Field = page.locator('#guestFrm_address_2');
-        this.cityField = page.locator('#guestFrm_city');
-        this.regionDropdown = page.locator('#guestFrm_zone_id');
-        this.zipPostCodeField = page.locator('#guestFrm_postcode');
-        this.countryDropdown = page.locator('#guestFrm_country_id');
-        this.separateShippingAddressCheckbox = page.locator('input[name="shipping_indicator"]');
-        
-        // Guest Checkout Step 2 - Shipping & Payment
-        this.guestStep2Title = page.locator('h1:has-text("Guest Checkout - Step 2")');
-        this.shippingMethodRadio = page.locator('input[name="shipping_method"]');
-        this.paymentMethodRadio = page.locator('input[name="payment_method"]');
-        
-        // Guest Checkout Step 3 - Confirmation
-        this.confirmationTitle = page.locator('h1:has-text("Checkout Confirmation")');
-        this.confirmOrderButton = page.locator('button:has-text("Confirm Order")');
-        this.editShippingLink = page.locator('a:has-text("Edit Shipping")');
-        this.editPaymentLink = page.locator('a:has-text("Edit Payment")');
-        this.editCartLink = page.locator('a:has-text("Edit Cart")');
-        this.editCouponLink = page.locator('a:has-text("Edit Coupon")');
-        
-        // Order Summary Section
-        this.orderSummarySection = page.locator('.sidebar .order-summary');
-        this.orderProductList = page.locator('.order-summary table tbody tr');
-        this.orderSubTotal = page.locator('td:has-text("Sub-Total:") + td');
-        this.orderShippingCost = page.locator('td:has-text("Flat Shipping Rate:") + td, td:has-text("Free Shipping:") + td');
-        this.orderTotal = page.locator('td:has-text("Total:") + td');
-        
-        // Coupon Section
-        this.couponCodeField = page.locator('input[name="coupon"]');
-        this.applyCouponButton = page.locator('button:has-text("Apply Coupon")');
-        
-        // Cart Items in Checkout
-        this.cartItemsTable = page.locator('.cart-info table');
-        this.cartQuantityFields = page.locator('input[name*="quantity"]');
-        this.removeItemLinks = page.locator('a[href*="remove"]');
-        
-        // Validation Messages
-        this.validationErrorMessages = page.locator('.has-error .help-block, .alert-danger');
-        this.successMessages = page.locator('.alert-success');
-        this.errorMessages = page.locator('.alert-error, .alert-danger');
-        
-        // Navigation
-        this.backButton = page.locator('a:has-text("Back")');
-        this.breadcrumbLinks = page.locator('.breadcrumb a');
-        
-        // Logged-in User Checkout Elements
-        this.savedAddressDropdown = page.locator('select[name="address_id"]');
-        this.useExistingAddressRadio = page.locator('input[value="existing"]');
-        this.useNewAddressRadio = page.locator('input[value="new"]');
+        this.page = page;
+        this.initializeLocators();
     }
 
-    // Navigation Methods
+    initializeLocators() {
+        this.guestCheckoutRadio = this.page.locator('input[value="guest"]');
+        this.registerAccountRadio = this.page.locator('input[value="register"]');
+        this.continueButton = this.page.getByRole('button', { name: 'Continue' });
+        this.confirmationTitle = this.page.getByRole('heading', { name: 'Checkout Confirmation' });
+        this.confirmOrderButton = this.page.getByRole('button', { name: 'Confirm Order' });
+
+        this.guestCheckoutTitle = this.page.getByText('Guest Checkout - Step').first();
+        // Guest checkout fields
+        this.che2button=page.locator('#checkout_btn');
+        this.firstNameField = this.page.locator('#guestFrm_firstname');
+        this.lastNameField = this.page.locator('#guestFrm_lastname');
+        this.emailField = this.page.locator('#guestFrm_email');
+        this.telephoneField = this.page.locator('#guestFrm_telephone');
+        this.address1Field = this.page.locator('#guestFrm_address_1');
+        this.cityField = this.page.locator('#guestFrm_city');
+        this.zipPostCodeField = this.page.locator('#guestFrm_postcode');
+        this.countryDropdown = this.page.locator('#guestFrm_country_id');
+        this.regionDropdown = this.page.locator('#guestFrm_zone_id');
+    }
+
     async navigateToCheckout() {
+        // Navigate to cart page first
         await this.page.goto('/index.php?rt=checkout/cart');
-        await this.page.locator('#cart_checkout2').click();
+        await this.page.waitForLoadState('networkidle');
+        
+        // Wait for checkout buttons to be available
+        await this.page.waitForSelector('#cart_checkout1, #cart_checkout2', { timeout: 10000 });
+        
+        // Click the checkout button
+        await this.page.locator('#cart_checkout1, #cart_checkout2').first().click();
+        
+        
+        // Check if we were redirected to login (indicates auth failure)
+        const currentUrl = this.page.url();
+        if (currentUrl.includes('account/login')) {
+            throw new Error('Authentication failed - redirected to login page. Please check storage state or login credentials.');
+        }
     }
 
     async selectGuestCheckout() {
@@ -92,193 +60,109 @@ class CheckoutPage extends BasePage {
         await this.continueButton.click();
     }
 
-    async loginExistingUser(username, password) {
-        await this.loginNameField.fill(username);
-        await this.passwordField.fill(password);
-        await this.loginButton.click();
+    async fillPersonalDetails(details) {
+        if (details.firstName) await this.firstNameField.fill(details.firstName);
+        if (details.lastName) await this.lastNameField.fill(details.lastName);
+        if (details.email) await this.emailField.fill(details.email);
+        if (details.telephone) await this.telephoneField.fill(details.telephone);
     }
 
-    // Guest Checkout Step 1 Methods
-    async fillPersonalDetails(personalDetails) {
-        if (personalDetails.firstName) await this.firstNameField.fill(personalDetails.firstName);
-        if (personalDetails.lastName) await this.lastNameField.fill(personalDetails.lastName);
-        if (personalDetails.email) await this.emailField.fill(personalDetails.email);
-        if (personalDetails.telephone) await this.telephoneField.fill(personalDetails.telephone);
-        if (personalDetails.fax) await this.faxField.fill(personalDetails.fax);
-    }
-
-    async fillShippingAddress(addressDetails) {
-        if (addressDetails.company) await this.companyField.fill(addressDetails.company);
-        if (addressDetails.address1) await this.address1Field.fill(addressDetails.address1);
-        if (addressDetails.address2) await this.address2Field.fill(addressDetails.address2);
-        if (addressDetails.city) await this.cityField.fill(addressDetails.city);
-        if (addressDetails.zipCode) await this.zipPostCodeField.fill(addressDetails.zipCode);
-        if (addressDetails.country) await this.countryDropdown.selectOption(addressDetails.country);
-        if (addressDetails.region) await this.regionDropdown.selectOption(addressDetails.region);
+    async fillShippingAddress(address) {
+        if (address.address1) await this.address1Field.fill(address.address1);
+        if (address.city) await this.cityField.fill(address.city);
+        if (address.zipCode) await this.zipPostCodeField.fill(address.zipCode);
+        if (address.country) await this.countryDropdown.selectOption({ label: address.country });
+        if (address.region) await this.regionDropdown.selectOption({ label: address.region });
     }
 
     async proceedToNextStep() {
         await this.continueButton.click();
     }
 
-    async goBack() {
-        await this.backButton.click();
-    }
-
-    // Order Management Methods
-    async updateProductQuantity(productIndex, quantity) {
-        await this.cartQuantityFields.nth(productIndex).fill(quantity.toString());
-    }
-
-    async removeProductFromCheckout(productIndex) {
-        await this.removeItemLinks.nth(productIndex).click();
-    }
-
-    async applyCouponCode(couponCode) {
-        await this.couponCodeField.fill(couponCode);
-        await this.applyCouponButton.click();
-    }
-
-    // Shipping Methods
-    async selectShippingMethod(methodValue) {
-        await this.page.locator(`input[name="shipping_method"][value="${methodValue}"]`).check();
-    }
-
-    async selectPaymentMethod(methodValue) {
-        await this.page.locator(`input[name="payment_method"][value="${methodValue}"]`).check();
-    }
-
-    // Final Confirmation
-    async confirmOrder() {
-        await this.confirmOrderButton.click();
-    }
-
-    // Validation Methods
-    async getValidationErrors() {
-        const errors = await this.validationErrorMessages.allTextContents();
-        return errors.filter(error => error.trim().length > 0);
-    }
-
-    async getSuccessMessage() {
-        await expect(this.successMessages).toBeVisible();
-        return await this.successMessages.textContent();
-    }
-
-    async getErrorMessage() {
-        await expect(this.errorMessages).toBeVisible();
-        return await this.errorMessages.textContent();
-    }
-
-    // Order Summary Verification Methods
     async getOrderSummary() {
-        const subTotal = await this.orderSubTotal.textContent();
-        const shipping = await this.orderShippingCost.textContent().catch(() => '$0.00');
-        const total = await this.orderTotal.textContent();
+        const subTotal = await this.page.locator('tr:has-text("Sub-Total") span.bold').last().textContent();
+        const shipping = await this.page.locator('tr:has-text("Flat Shipping Rate") span.bold').last().textContent().catch(() => '$0.00');
+        const total = await this.page.locator('tr:has-text("Total") span.bold').last().textContent();
+        return { subTotal: subTotal?.trim(), shipping: shipping?.trim(), total: total?.trim() };
+    }
+
+    async getShippingAddressDetails() {
+        return (await this.page.locator('h4:has-text("Shipping") + table td').nth(1).textContent())?.trim();
+    }
+
+    // Methods for verifying automatically filled shipping and payment addresses for registered users
+    async verifyShippingAddressAutoFilled() {
+        // Check if shipping address table is present (for registered users)
+        const shippingTable = this.page.locator('table.confirm_shippment_options');
+        await expect(shippingTable).toBeVisible();
+        return true;
+    }
+
+    async getPrefilledShippingAddress() {
+        // Get the prefilled shipping address details from the confirmation table
+        const shippingTable = this.page.locator('table.confirm_shippment_options tbody tr');
+        
+        const customerInfo = await shippingTable.locator('td').nth(0).textContent();
+        const address = await shippingTable.locator('td').nth(1).textContent();
+        const shippingMethod = await shippingTable.locator('td').nth(2).textContent();
         
         return {
-            subTotal: subTotal?.trim(),
-            shipping: shipping?.trim(),
-            total: total?.trim()
+            customerInfo: customerInfo?.trim(),
+            address: address?.trim(),
+            shippingMethod: shippingMethod?.trim()
         };
     }
 
-    async getCartItems() {
-        const items = [];
-        const rows = await this.orderProductList.all();
+    async verifyShippingAddressContains(expectedData) {
+        const shippingAddress = await this.getPrefilledShippingAddress();
         
-        for (const row of rows) {
-            const name = await row.locator('td').nth(0).textContent();
-            const price = await row.locator('td').nth(1).textContent();
-            items.push({ name: name?.trim(), price: price?.trim() });
+        if (expectedData.name) {
+            expect(shippingAddress.customerInfo).toContain(expectedData.name);
+        }
+        if (expectedData.phone) {
+            expect(shippingAddress.customerInfo).toContain(expectedData.phone);
+        }
+        if (expectedData.address) {
+            expect(shippingAddress.address).toContain(expectedData.address);
+        }
+        if (expectedData.city) {
+            expect(shippingAddress.address).toContain(expectedData.city);
+        }
+        if (expectedData.zipCode) {
+            expect(shippingAddress.address).toContain(expectedData.zipCode);
+        }
+        if (expectedData.country) {
+            expect(shippingAddress.address).toContain(expectedData.country);
         }
         
-        return items;
+        return shippingAddress;
     }
 
-    // Address Verification Methods
-    async getShippingAddressDetails() {
-        const shippingSection = this.page.locator('h4:has-text("Shipping") + table');
-        const addressText = await shippingSection.locator('td').nth(1).textContent();
-        return addressText?.trim();
+    async isEditShippingButtonPresent() {
+        const editButton = this.page.getByRole('link', { name: 'Edit Shipping' });
+        return await editButton.isVisible();
     }
 
-    async getPaymentAddressDetails() {
-        const paymentSection = this.page.locator('h4:has-text("Payment") + table');
-        const addressText = await paymentSection.locator('td').nth(1).textContent();
-        return addressText?.trim();
+    async verifyPaymentAddressAutoFilled() {
+        // Check if payment address section is present and filled
+        const paymentSection = this.page.locator('h4:has-text("Payment"), h4:has-text("Billing")');
+        return await paymentSection.count() > 0;
     }
 
-    // Saved Address Methods (for logged-in users)
-    async selectSavedAddress(addressId) {
-        await this.savedAddressDropdown.selectOption(addressId);
-    }
-
-    async useSavedAddress() {
-        await this.useExistingAddressRadio.check();
-    }
-
-    async useNewAddress() {
-        await this.useNewAddressRadio.check();
-    }
-
-    // Browser Navigation Methods
-    async navigateBackWithBrowser() {
-        await this.page.goBack();
-    }
-
-    async refreshPage() {
-        await this.page.reload();
-    }
-
-    // Session and State Methods
-    async waitForSessionTimeout(timeoutMs = 30000) {
-        await this.page.waitForTimeout(timeoutMs);
-    }
-
-    async checkIfSessionExpired() {
-        const currentUrl = this.page.url();
-        return currentUrl.includes('login') || currentUrl.includes('session');
-    }
-
-    // Stock Verification Methods
-    async checkProductAvailability() {
-        const outOfStockMessage = this.page.locator('text=Out of Stock');
-        return !(await outOfStockMessage.isVisible());
-    }
-
-    // Advanced Validation Methods
-    async validateRequiredFields() {
-        const requiredFields = [
-            this.firstNameField,
-            this.lastNameField,
-            this.emailField,
-            this.address1Field,
-            this.cityField,
-            this.regionDropdown,
-            this.zipPostCodeField,
-            this.countryDropdown
-        ];
-
-        const invalidFields = [];
-        for (const field of requiredFields) {
-            const isEmpty = (await field.inputValue()).length === 0;
-            if (isEmpty) {
-                invalidFields.push(field);
-            }
+    async getPrefilledPaymentAddress() {
+        // Get the prefilled payment/billing address details
+        const paymentAddressElement = this.page.locator('h4:has-text("Payment") + table td, h4:has-text("Billing") + table td').nth(1);
+        
+        if (await paymentAddressElement.isVisible()) {
+            return (await paymentAddressElement.textContent())?.trim();
         }
-        return invalidFields;
+        return null;
     }
 
-    async validateEmailFormat(email) {
-        await this.emailField.fill(email);
-        await this.continueButton.click();
-        return await this.getValidationErrors();
-    }
-
-    async validatePhoneFormat(phone) {
-        await this.telephoneField.fill(phone);
-        await this.continueButton.click();
-        return await this.getValidationErrors();
+    async confirmOrder() {
+        await this.confirmOrderButton.click();
+        // Wait for order confirmation or success page
+        await this.page.waitForURL('**/checkout/success', { timeout: 10000 });
     }
 }
 

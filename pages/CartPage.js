@@ -19,7 +19,7 @@ class CartPage extends BasePage {
         
         // Buttons - using specific selectors from HTML
         this.updateButton = page.locator('button#cart_update');
-        this.checkoutButton = page.locator('a#cart_checkout1');
+        this.checkoutButton = page.locator('a#cart_checkout2');
         this.continueShoppingButton = page.locator('a:has-text("Continue Shopping")');
         
         // Coupon section
@@ -32,10 +32,10 @@ class CartPage extends BasePage {
         this.zipCodeInput = page.locator('input[type="text"]').last();
         this.estimateButton = page.locator('button:has-text("Estimate")');
         
-        // Summary section
-        this.subTotal = page.locator('td:has-text("Sub-Total:") + td');
-        this.shippingCost = page.locator('td:has-text("Flat Shipping Rate:") + td');
-        this.grandTotal = page.locator('td:has-text("Total:") + td');
+        // Summary section - updated to match actual HTML structure
+        this.subTotal = page.locator('#totals_table td:has-text("Sub-Total:") + td span.bold');
+        this.shippingCost = page.locator('#totals_table td:has-text("Flat Shipping Rate:") + td span.bold');
+        this.grandTotal = page.locator('#totals_table td:has-text("Total:") + td span.bold.totalamout');
         
         // Success/Error messages
         this.successMessage = page.locator('.alert-success');

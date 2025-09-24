@@ -17,7 +17,8 @@ module.exports = defineConfig({
   },
 
   projects: [
-  { name: 'all', testMatch: /.*\.js/ } // matches both setup.js and spec.js
-]
+    { name: 'all', testMatch: /.*\.js/ },
+     // matches both setup.js and spec.js
+  ]
 
 });

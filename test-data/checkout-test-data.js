@@ -16,7 +16,8 @@ const validShippingAddress = {
     city: 'Los Angeles',
     region: 'Greater London',
     zipCode: 'SW1A 1AA',
-    country: 'United Kingdom'
+    country: 'United Kingdom',
+    countryCode: 'GB'
 };
 
 const validShippingAddressUS = {
@@ -26,7 +27,8 @@ const validShippingAddressUS = {
     city: 'Los Angeles',
     region: 'California',
     zipCode: '90210',
-    country: 'United States'
+    country: 'United States',
+    countryCode: 'US'
 };
 
 const invalidShippingAddress = {
