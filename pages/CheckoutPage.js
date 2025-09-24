@@ -134,6 +134,243 @@ class CheckoutPage extends BasePage {
         await this.confirmOrderButton.click();
         await this.page.getByText('Your Order Has Been Processed!');
     }
+
+    // Additional methods for comprehensive test coverage
+    
+    async modifyQuantity(quantity) {
+        const quantityField = this.page.locator('#product_quantity');
+        await quantityField.clear();
+        await quantityField.fill(quantity.toString());
+        await this.page.waitForTimeout(500);
+    }
+
+    async getQuantity() {
+        const quantityField = this.page.locator('#product_quantity');
+        return await quantityField.inputValue();
+    }
+
+    async removeProduct(productName) {
+        const removeButton = this.page.locator(`tr:has-text("${productName}") .remove-item`);
+        await removeButton.click();
+        await this.page.waitForTimeout(500);
+    }
+
+    async isCartEmpty() {
+        const emptyMessage = this.page.locator('text=Your cart is empty');
+        return await emptyMessage.isVisible();
+    }
+
+    async getEmptyCartMessage() {
+        const emptyMessage = this.page.locator('text=Your cart is empty');
+        return await emptyMessage.textContent();
+    }
+
+    async getShippingOptions() {
+        const shippingOptions = this.page.locator('input[name="shipping_method"]');
+        return await shippingOptions.all();
+    }
+
+    async selectShippingMethod(methodName) {
+        const shippingOption = this.page.locator(`input[value*="${methodName.toLowerCase()}"]`);
+        await shippingOption.check();
+        await this.page.waitForTimeout(500);
+    }
+
+    async goBackToCart() {
+        await this.page.goBack();
+        await this.page.waitForLoadState();
+    }
+
+    async getOrderLineItems() {
+        const lineItems = this.page.locator('table.order-summary tr');
+        return await lineItems.all();
+    }
+
+    async getDiscountInfo() {
+        const discountElement = this.page.locator('text=discount, text=Discount');
+        if (await discountElement.isVisible()) {
+            return await discountElement.textContent();
+        }
+        return null;
+    }
+
+    async enterCouponCode(couponCode) {
+        const couponField = this.page.locator('input[name="coupon"]');
+        await couponField.fill(couponCode);
+    }
+
+    async applyCoupon() {
+        const applyButton = this.page.locator('button:has-text("Apply")');
+        await applyButton.click();
+        await this.page.waitForTimeout(500);
+    }
+
+    async getCouponErrorMessage() {
+        const errorMessage = this.page.locator('.alert-error, .alert-danger');
+        if (await errorMessage.isVisible()) {
+            return await errorMessage.textContent();
+        }
+        return null;
+    }
+
+    async getValidationErrors() {
+        const errorElements = this.page.locator('.error, .alert-danger, .validation-error');
+        const errors = [];
+        const count = await errorElements.count();
+        for (let i = 0; i < count; i++) {
+            const error = await errorElements.nth(i).textContent();
+            errors.push(error);
+        }
+        return errors;
+    }
+
+    async canProceedToNextStep() {
+        const continueButton = this.page.locator('button:has-text("Continue")');
+        return await continueButton.isEnabled();
+    }
+
+    async fillRequiredField(fieldName, value) {
+        const fieldMap = {
+            firstName: this.firstNameField,
+            lastName: this.lastNameField,
+            email: this.emailField,
+            telephone: this.telephoneField,
+            address1: this.address1Field,
+            city: this.cityField,
+            region: this.regionDropdown,
+            zipCode: this.zipPostCodeField,
+            country: this.countryDropdown
+        };
+        
+        if (fieldMap[fieldName]) {
+            if (fieldName === 'region' || fieldName === 'country') {
+                await fieldMap[fieldName].selectOption({ label: value });
+            } else {
+                await fieldMap[fieldName].fill(value);
+            }
+        }
+    }
+
+    async fillEmailField(email) {
+        await this.emailField.fill(email);
+    }
+
+    async getEmailValidationError() {
+        const emailError = this.page.locator('#guestFrm_email + .error');
+        if (await emailError.isVisible()) {
+            return await emailError.textContent();
+        }
+        return null;
+    }
+
+    async fillPhoneField(phone) {
+        await this.telephoneField.fill(phone);
+    }
+
+    async getPhoneValidationError() {
+        const phoneError = this.page.locator('#guestFrm_telephone + .error');
+        if (await phoneError.isVisible()) {
+            return await phoneError.textContent();
+        }
+        return null;
+    }
+
+    async isGuestCheckoutAvailable() {
+        return await this.guestCheckoutRadio.isVisible();
+    }
+
+    async isCreateAccountAvailable() {
+        return await this.registerAccountRadio.isVisible();
+    }
+
+    async selectCreateAccountOption() {
+        await this.registerAccountRadio.check();
+        await this.continueButton.click();
+    }
+
+    async fillAccountDetails(accountDetails) {
+        const passwordField = this.page.locator('#guestFrm_password');
+        const confirmPasswordField = this.page.locator('#guestFrm_confirm_password');
+        
+        if (accountDetails.password) {
+            await passwordField.fill(accountDetails.password);
+        }
+        if (accountDetails.confirmPassword) {
+            await confirmPasswordField.fill(accountDetails.confirmPassword);
+        }
+    }
+
+    async isUserLoggedIn() {
+        const loginLink = this.page.locator('text=Login or register');
+        return !(await loginLink.isVisible());
+    }
+
+    async getSavedAddresses() {
+        const savedAddresses = this.page.locator('.saved-address');
+        return await savedAddresses.all();
+    }
+
+    async selectSavedAddress(addressElement) {
+        await addressElement.click();
+        await this.page.waitForTimeout(500);
+    }
+
+    async getSelectedAddressDetails() {
+        const addressDetails = this.page.locator('.selected-address');
+        return await addressDetails.textContent();
+    }
+
+    async simulateStockDepletion(productName) {
+        // This would need to be implemented based on your system's stock management
+        // For now, we'll just wait and check for stock-related errors
+        await this.page.waitForTimeout(1000);
+    }
+
+    async getStockDepletionError() {
+        const stockError = this.page.locator('text=out of stock, text=Out of Stock');
+        if (await stockError.isVisible()) {
+            return await stockError.textContent();
+        }
+        return null;
+    }
+
+    async canCompleteCheckout() {
+        const confirmButton = this.page.locator('#checkout_btn');
+        return await confirmButton.isEnabled();
+    }
+
+    async goBack() {
+        await this.page.goBack();
+        await this.page.waitForLoadState();
+    }
+
+    async getPreservedData() {
+        // Check if form data is preserved after going back
+        const firstNameValue = await this.firstNameField.inputValue();
+        return firstNameValue !== '';
+    }
+
+    async modifyShippingAddress(address) {
+        await this.fillShippingAddress(address);
+    }
+
+    async simulateSessionTimeout(timeout) {
+        // Simulate session timeout by waiting
+        await this.page.waitForTimeout(timeout);
+    }
+
+    async getSessionHandlingMessage() {
+        const sessionMessage = this.page.locator('text=session, text=timeout, text=expired');
+        if (await sessionMessage.isVisible()) {
+            return await sessionMessage.textContent();
+        }
+        return null;
+    }
+
+    async needsReauthentication() {
+        const loginPage = this.page.url().includes('account/login');
+        return loginPage;
+    }
 }
 
 module.exports = CheckoutPage;
