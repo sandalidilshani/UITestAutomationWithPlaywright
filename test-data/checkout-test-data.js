@@ -67,19 +67,19 @@ const testProducts = {
 
 // Comprehensive test case data
 const checkoutTestData = {
-    // TS003_TC01: Guest checkout with single product
+    // TS004_TC01: Guest checkout with single product
     guestCheckout: {
         userType: 'guest',
         personalDetails: guestUserData,
         shippingAddress: shippingAddressData
     },
     
-    // TS003_TC02: Logged-in user checkout
+    // TS004_TC02: Logged-in user checkout
     loggedInCheckout: {
         userType: 'logged_in'
     },
     
-    // TS003_TC03: Quantity modification during checkout
+    // TS004_TC03: Quantity modification during checkout
     quantityModification: {
         userType: 'guest',
         personalDetails: guestUserData,
@@ -88,28 +88,28 @@ const checkoutTestData = {
         modifiedQuantity: 2
     },
     
-    // TS003_TC04: Product removal during checkout
+    // TS004_TC04: Product removal during checkout
     productRemoval: {
         userType: 'guest',
         personalDetails: guestUserData,
         shippingAddress: shippingAddressData
     },
     
-    // TS003_TC05: Valid shipping address
+    // TS004_TC05: Valid shipping address
     validShippingAddress: {
         userType: 'guest',
         personalDetails: guestUserData,
         shippingAddress: shippingAddressData
     },
     
-    // TS003_TC06: Invalid shipping address
+    // TS004_TC06: Invalid shipping address
     invalidShippingAddress: {
         userType: 'guest',
         personalDetails: guestUserData,
         shippingAddress: invalidShippingAddress
     },
     
-    // TS003_TC07: Multiple shipping options
+    // TS004_TC07: Multiple shipping options
     multipleShippingOptions: {
         userType: 'guest',
         personalDetails: guestUserData,
@@ -117,7 +117,7 @@ const checkoutTestData = {
         shippingMethods: [shippingMethods.standard, shippingMethods.express, shippingMethods.overnight]
     },
     
-    // TS003_TC08: Free shipping threshold
+    // TS004_TC08: Free shipping threshold
     freeShippingThreshold: {
         userType: 'guest',
         personalDetails: guestUserData,
@@ -127,7 +127,7 @@ const checkoutTestData = {
         highValueProduct: testProducts.highPrice
     },
     
-    // TS003_TC09: Order summary accuracy
+    // TS004_TC09: Order summary accuracy
     orderSummaryAccuracy: {
         userType: 'guest',
         personalDetails: guestUserData,
@@ -136,7 +136,7 @@ const checkoutTestData = {
         shippingCost: 5.99
     },
     
-    // TS003_TC10: Order summary with discount
+    // TS004_TC10: Order summary with discount
     orderSummaryWithDiscount: {
         userType: 'guest',
         personalDetails: guestUserData,
@@ -144,7 +144,7 @@ const checkoutTestData = {
         product: testProducts.discounted
     },
     
-    // TS003_TC11: Invalid coupon code
+    // TS004_TC11: Invalid coupon code
     invalidCoupon: {
         userType: 'guest',
         personalDetails: guestUserData,
@@ -152,13 +152,13 @@ const checkoutTestData = {
         couponCode: couponData.invalid
     },
     
-    // TS003_TC12: Required field validation
+    // TS004_TC12: Required field validation
     requiredFieldValidation: {
         userType: 'guest',
         requiredFields: ['firstName', 'lastName', 'email', 'address1', 'city', 'region', 'zipCode', 'country']
     },
     
-    // TS003_TC13: Email format validation
+    // TS004_TC13: Email format validation
     emailValidation: {
         userType: 'guest',
         personalDetails: { ...guestUserData, email: '' },
@@ -167,7 +167,7 @@ const checkoutTestData = {
         validEmail: validData.validEmail
     },
     
-    // TS003_TC14: Phone number validation
+    // TS004_TC14: Phone number validation
     phoneValidation: {
         userType: 'guest',
         personalDetails: { ...guestUserData, telephone: '' },
@@ -176,14 +176,14 @@ const checkoutTestData = {
         validPhone: validData.validPhone
     },
     
-    // TS003_TC15: Guest checkout option availability
+    // TS004_TC15: Guest checkout option availability
     guestCheckoutAvailability: {
         userType: 'guest',
         personalDetails: guestUserData,
         shippingAddress: shippingAddressData
     },
     
-    // TS003_TC16: Account creation during checkout
+    // TS004_TC16: Account creation during checkout
     accountCreation: {
         userType: 'create_account',
         personalDetails: guestUserData,
@@ -194,13 +194,13 @@ const checkoutTestData = {
         }
     },
     
-    // TS003_TC17: Saved address usage
+    // TS004_TC17: Saved address usage
     savedAddressUsage: {
         userType: 'logged_in',
         useSavedAddress: true
     },
     
-    // TS003_TC18: Stock depletion during checkout
+    // TS004_TC18: Stock depletion during checkout
     stockDepletion: {
         userType: 'guest',
         personalDetails: guestUserData,
@@ -208,7 +208,7 @@ const checkoutTestData = {
         product: 'last_available_item'
     },
     
-    // TS003_TC19: Browser back button navigation
+    // TS004_TC20: Browser back button navigation
     browserNavigation: {
         userType: 'guest',
         personalDetails: guestUserData,
@@ -216,7 +216,7 @@ const checkoutTestData = {
         testBrowserNavigation: true
     },
     
-    // TS003_TC20: Session timeout handling
+    // TS004_TC21: Session timeout handling
     sessionTimeout: {
         userType: 'guest',
         personalDetails: guestUserData,

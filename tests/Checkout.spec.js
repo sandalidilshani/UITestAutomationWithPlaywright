@@ -3,7 +3,7 @@ const CheckoutPage = require('../pages/CheckoutPage');
 const checkoutTestData = require('../test-data/checkout-test-data');
 const cartTestData = require('../test-data/cart-test-data');
 
-test.describe('Checkout Functionality Tests - TS003', () => {
+test.describe('Checkout Functionality Tests - TS004', () => {
   let checkoutPage;
 
   test.beforeEach(async ({ page, addProductToCartFixture }) => {
@@ -11,8 +11,8 @@ test.describe('Checkout Functionality Tests - TS003', () => {
     await addProductToCartFixture.clearCart();
   });
 
-  // TS003_TC01: Guest checkout with single product
-  test('TS003_TC01 - Verify single product checkout flow as guest user', async ({ addProductToCartFixture }) => {
+  // TS004_TC01: Guest checkout with single product
+  test('TS004_TC01 - Verify single product checkout flow as guest user', async ({ addProductToCartFixture }) => {
     const testData = checkoutTestData.checkoutTestData.guestCheckout;
     const productToAdd = cartTestData.specificProducts[0];
 
@@ -22,25 +22,24 @@ test.describe('Checkout Functionality Tests - TS003', () => {
 
     // Navigate to checkout
     await checkoutPage.navigateToCheckout();
+    
+    await expect(checkoutPage.guestCheckoutRadio).toBeVisible();
     await checkoutPage.selectGuestCheckout();
     
-    // Fill checkout form
+    await expect(checkoutPage.guestCheckoutTitle).toBeVisible();
+    
     await checkoutPage.fillPersonalDetails(testData.personalDetails);
     await checkoutPage.fillShippingAddress(testData.shippingAddress);
     await checkoutPage.proceedToNextStep();
 
-    // Verify checkout page elements
-    await expect(checkoutPage.guestCheckoutTitle).toBeVisible();
     await expect(checkoutPage.confirmationTitle).toBeVisible();
-
-    // Verify order summary
     const orderSummary = await checkoutPage.getOrderSummary();
     expect(orderSummary.subTotal).toBeTruthy();
     expect(orderSummary.total).toBeTruthy();
   });
 
-  // TS003_TC02: Logged-in user checkout
-  test('TS003_TC02 - Verify single product checkout flow as logged-in user', async ({ addProductToCartFixture }) => {
+  // TS004_TC02: Logged-in user checkout
+  test('TS004_TC02 - Verify single product checkout flow as logged-in user', async ({ addProductToCartFixture }) => {
     const productToAdd = cartTestData.specificProducts[0];
 
     // Add product to cart with login
@@ -66,11 +65,11 @@ test.describe('Checkout Functionality Tests - TS003', () => {
     
     // Verify edit button is present
     const editButtonPresent = await checkoutPage.isEditShippingButtonPresent();
-    expect(editButtonPresent).toBeTruthy();
+    expect(editButtonPresent).toBeTruthy();  
   });
 
-  // TS003_TC03: Quantity modification during checkout
-  test('TS003_TC03 - Verify checkout with product quantity modification', async ({ addProductToCartFixture }) => {
+  // TS004_TC03: Quantity modification during checkout
+  test('TS004_TC03 - Verify checkout with product quantity modification', async ({ addProductToCartFixture }) => {
     const testData = checkoutTestData.checkoutTestData.quantityModification;
     const productToAdd = cartTestData.specificProducts[0];
 
@@ -98,8 +97,8 @@ test.describe('Checkout Functionality Tests - TS003', () => {
     await expect(checkoutPage.confirmationTitle).toBeVisible();
   });
 
-  // TS003_TC04: Product removal during checkout
-  test('TS003_TC04 - Verify checkout with product removal during process', async ({ addProductToCartFixture }) => {
+  // TS004_TC04: Product removal during checkout
+  test('TS004_TC04 - Verify checkout with product removal during process', async ({ addProductToCartFixture }) => {
     const testData = checkoutTestData.checkoutTestData.productRemoval;
     const productToAdd = cartTestData.specificProducts[0];
 
@@ -123,8 +122,8 @@ test.describe('Checkout Functionality Tests - TS003', () => {
     expect(emptyCartMessage).toContain('empty');
   });
 
-  // TS003_TC05: Valid shipping address
-  test('TS003_TC05 - Verify checkout with valid shipping address', async ({ addProductToCartFixture }) => {
+  // TS004_TC05: Valid shipping address
+  test('TS004_TC05 - Verify checkout with valid shipping address', async ({ addProductToCartFixture }) => {
     const testData = checkoutTestData.checkoutTestData.validShippingAddress;
     const productToAdd = cartTestData.specificProducts[0];
 
@@ -149,8 +148,8 @@ test.describe('Checkout Functionality Tests - TS003', () => {
     await expect(checkoutPage.confirmationTitle).toBeVisible();
   });
 
-  // TS003_TC06: Invalid shipping address
-  test('TS003_TC06 - Verify checkout with invalid shipping address', async ({ addProductToCartFixture }) => {
+  // TS004_TC06: Invalid shipping address
+  test('TS004_TC06 - Verify checkout with invalid shipping address', async ({ addProductToCartFixture }) => {
     const testData = checkoutTestData.checkoutTestData.invalidShippingAddress;
     const productToAdd = cartTestData.specificProducts[0];
 
@@ -178,8 +177,8 @@ test.describe('Checkout Functionality Tests - TS003', () => {
     expect(canProceed).toBeFalsy();
   });
 
-  // TS003_TC07: Multiple shipping options
-  test('TS003_TC07 - Verify checkout with multiple shipping options', async ({ addProductToCartFixture }) => {
+  // TS004_TC07: Multiple shipping options
+  test('TS004_TC07 - Verify checkout with multiple shipping options', async ({ addProductToCartFixture }) => {
     const testData = checkoutTestData.checkoutTestData.multipleShippingOptions;
     const productToAdd = cartTestData.specificProducts[0];
 
@@ -210,8 +209,8 @@ test.describe('Checkout Functionality Tests - TS003', () => {
     }
   });
 
-  // TS003_TC08: Free shipping threshold
-  test('TS003_TC08 - Verify checkout with free shipping threshold', async ({ addProductToCartFixture }) => {
+  // TS004_TC08: Free shipping threshold
+  test('TS004_TC08 - Verify checkout with free shipping threshold', async ({ addProductToCartFixture }) => {
     const testData = checkoutTestData.checkoutTestData.freeShippingThreshold;
     const productToAdd = cartTestData.specificProducts[0];
 
@@ -248,8 +247,8 @@ test.describe('Checkout Functionality Tests - TS003', () => {
     expect(updatedOrderSummary.shipping).toContain('$0.00');
   });
 
-  // TS003_TC09: Order summary accuracy
-  test('TS003_TC09 - Verify order summary accuracy with single product', async ({ addProductToCartFixture }) => {
+  // TS004_TC09: Order summary accuracy
+  test('TS004_TC09 - Verify order summary accuracy with single product', async ({ addProductToCartFixture }) => {
     const testData = checkoutTestData.checkoutTestData.orderSummaryAccuracy;
     const productToAdd = cartTestData.specificProducts[0];
 
@@ -277,8 +276,8 @@ test.describe('Checkout Functionality Tests - TS003', () => {
     expect(lineItems.length).toBeGreaterThan(0);
   });
 
-  // TS003_TC10: Order summary with discount
-  test('TS003_TC10 - Verify order summary with product discount', async ({ addProductToCartFixture }) => {
+  // TS004_TC10: Order summary with discount
+  test('TS004_TC10 - Verify order summary with product discount', async ({ addProductToCartFixture }) => {
     const testData = checkoutTestData.checkoutTestData.orderSummaryWithDiscount;
     const productToAdd = cartTestData.specificProducts[0];
 
@@ -307,8 +306,8 @@ test.describe('Checkout Functionality Tests - TS003', () => {
     }
   });
 
-  // TS003_TC11: Invalid coupon code
-  test('TS003_TC11 - Verify checkout with invalid coupon code', async ({ addProductToCartFixture }) => {
+  // TS004_TC11: Invalid coupon code
+  test('TS004_TC11 - Verify checkout with invalid coupon code', async ({ addProductToCartFixture }) => {
     const testData = checkoutTestData.checkoutTestData.invalidCoupon;
     const productToAdd = cartTestData.specificProducts[0];
 
@@ -338,8 +337,8 @@ test.describe('Checkout Functionality Tests - TS003', () => {
     expect(orderSummary.subTotal).toBeTruthy();
   });
 
-  // TS003_TC12: Required field validation
-  test('TS003_TC12 - Verify required field validation in checkout', async ({ addProductToCartFixture }) => {
+  // TS004_TC12: Required field validation
+  test('TS004_TC12 - Verify required field validation in checkout', async ({ addProductToCartFixture }) => {
     const testData = checkoutTestData.checkoutTestData.requiredFieldValidation;
     const productToAdd = cartTestData.specificProducts[0];
 
@@ -368,17 +367,11 @@ test.describe('Checkout Functionality Tests - TS003', () => {
     }
   });
 
-  // TS003_TC13: Email format validation
-  test('TS003_TC13 - Verify email format validation in checkout', async ({ addProductToCartFixture }) => {
+  test('TS004_TC13 - Verify email format validation in checkout', async ({ addProductToCartFixture }) => {
     const testData = checkoutTestData.checkoutTestData.emailValidation;
     const productToAdd = cartTestData.specificProducts[0];
-
-    // Add product to cart
     await addProductToCartFixture.addSpecificProductToCart(productToAdd, 1);
-    await addProductToCartFixture.verifyProductInCart(productToAdd.name, 1);
-
-    // Navigate to checkout
-    await checkoutPage.navigateToCheckout();
+    await addProductToCartFixture.verifyProductInCart(productToAdd.name, 1);    await checkoutPage.navigateToCheckout();
     await checkoutPage.selectGuestCheckout();
     
     // Test invalid email formats
@@ -386,7 +379,6 @@ test.describe('Checkout Functionality Tests - TS003', () => {
       await checkoutPage.fillEmailField(invalidEmail);
       await checkoutPage.proceedToNextStep();
       
-      // Verify email validation error messages
       const emailError = await checkoutPage.getEmailValidationError();
       expect(emailError).toContain('invalid');
     }
@@ -400,8 +392,8 @@ test.describe('Checkout Functionality Tests - TS003', () => {
     expect(emailError).toBeNull();
   });
 
-  // TS003_TC14: Phone number validation
-  test('TS003_TC14 - Verify phone number validation in checkout', async ({ addProductToCartFixture }) => {
+  // TS004_TC14: Phone number validation
+  test('TS004_TC14 - Verify phone number validation in checkout', async ({ addProductToCartFixture }) => {
     const testData = checkoutTestData.checkoutTestData.phoneValidation;
     const productToAdd = cartTestData.specificProducts[0];
 
@@ -432,8 +424,8 @@ test.describe('Checkout Functionality Tests - TS003', () => {
     expect(phoneError).toBeNull();
   });
 
-  // TS003_TC15: Guest checkout option availability
-  test('TS003_TC15 - Verify guest checkout option availability', async ({ addProductToCartFixture }) => {
+  // TS004_TC15: Guest checkout option availability
+  test('TS004_TC15 - Verify guest checkout option availability', async ({ addProductToCartFixture }) => {
     const testData = checkoutTestData.checkoutTestData.guestCheckoutAvailability;
     const productToAdd = cartTestData.specificProducts[0];
 
@@ -459,8 +451,8 @@ test.describe('Checkout Functionality Tests - TS003', () => {
     await expect(checkoutPage.guestCheckoutTitle).toBeVisible();
   });
 
-  // TS003_TC16: Account creation during checkout
-  test('TS003_TC16 - Verify account creation during checkout', async ({ addProductToCartFixture }) => {
+  // TS004_TC16: Account creation during checkout
+  test('TS004_TC16 - Verify account creation during checkout', async ({ addProductToCartFixture }) => {
     const testData = checkoutTestData.checkoutTestData.accountCreation;
     const productToAdd = cartTestData.specificProducts[0];
 
@@ -488,8 +480,8 @@ test.describe('Checkout Functionality Tests - TS003', () => {
     await expect(checkoutPage.confirmationTitle).toBeVisible();
   });
 
-  // TS003_TC17: Saved address usage for logged-in user
-  test('TS003_TC17 - Verify checkout with saved address usage for logged-in user', async ({ addProductToCartFixture }) => {
+  // TS004_TC17: Saved address usage for logged-in user
+  test('TS004_TC17 - Verify checkout with saved address usage for logged-in user', async ({ addProductToCartFixture }) => {
     const testData = checkoutTestData.checkoutTestData.savedAddressUsage;
     const productToAdd = cartTestData.specificProducts[0];
 
@@ -515,8 +507,8 @@ test.describe('Checkout Functionality Tests - TS003', () => {
     await expect(checkoutPage.confirmationTitle).toBeVisible();
   });
 
-  // TS003_TC18: Stock depletion during checkout
-  test('TS003_TC18 - Verify checkout with product stock depletion during process', async ({ addProductToCartFixture }) => {
+  // TS004_TC18: Stock depletion during checkout
+  test('TS004_TC18 - Verify checkout with product stock depletion during process', async ({ addProductToCartFixture }) => {
     const testData = checkoutTestData.checkoutTestData.stockDepletion;
     const productToAdd = cartTestData.specificProducts[0];
 
@@ -547,8 +539,8 @@ test.describe('Checkout Functionality Tests - TS003', () => {
     expect(canComplete).toBeFalsy();
   });
 
-  // TS003_TC19: Browser back button navigation
-  test('TS003_TC19 - Verify checkout with browser back button navigation', async ({ addProductToCartFixture }) => {
+  // TS004_TC20: Browser back button navigation
+  test('TS004_TC20 - Verify checkout with browser back button navigation', async ({ addProductToCartFixture }) => {
     const testData = checkoutTestData.checkoutTestData.browserNavigation;
     const productToAdd = cartTestData.specificProducts[0];
 
@@ -579,8 +571,8 @@ test.describe('Checkout Functionality Tests - TS003', () => {
     await expect(checkoutPage.confirmationTitle).toBeVisible();
   });
 
-  // TS003_TC20: Session timeout handling
-  test('TS003_TC20 - Verify checkout with session timeout', async ({ addProductToCartFixture }) => {
+  // TS004_TC21: Session timeout handling
+  test('TS004_TC21 - Verify checkout with session timeout', async ({ addProductToCartFixture }) => {
     const testData = checkoutTestData.checkoutTestData.sessionTimeout;
     const productToAdd = cartTestData.specificProducts[0];
 
@@ -617,8 +609,8 @@ test.describe('Checkout Functionality Tests - TS003', () => {
 
     // Add multiple products to cart
     for (const product of productsToAdd) {
-      await addProductToCartFixture.addSpecificProductToCart(product, 1);
-      await addProductToCartFixture.verifyProductInCart(product.name, 1);
+    await addProductToCartFixture.addSpecificProductToCart(product, 1);
+    await addProductToCartFixture.verifyProductInCart(product.name, 1);
     }
 
     // Navigate to checkout

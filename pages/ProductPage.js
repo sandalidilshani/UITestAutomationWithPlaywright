@@ -39,7 +39,6 @@ class ProductPage extends BasePage {
                 timeout: 60000
             });
             
-            // Wait for product-specific elements to ensure page is fully loaded
             await Promise.all([
                 this.page.waitForSelector('h1', { timeout: 10000 }),
                 this.page.waitForSelector('.productprice', { timeout: 10000 }),
@@ -55,11 +54,9 @@ class ProductPage extends BasePage {
     async navigateToProductByUrl(productUrl) {
         try {
             await this.page.goto(productUrl, {
-                waitUntil: 'domcontentloaded',
                 timeout: 60000
             });
             
-            // Wait for product-specific elements to ensure page is fully loaded
             await Promise.all([
                 this.page.waitForSelector('h1', { timeout: 10000 }),
                 this.page.waitForSelector('.productprice', { timeout: 10000 }),
