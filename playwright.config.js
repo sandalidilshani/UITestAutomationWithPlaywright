@@ -8,7 +8,11 @@ module.exports = defineConfig({
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? config.test.retries : 0,
   workers: process.env.CI ? config.test.workers : undefined,
-  reporter: 'html',
+  reporter: [
+    ['list'],
+    ['./reporters/custom-html-report.js',{outputFile: 'custom-report.html'}]
+    
+  ],
   use: {
     baseURL: config.app.baseUrl,
     screenshot: 'only-on-failure',

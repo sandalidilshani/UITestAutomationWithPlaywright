@@ -84,3 +84,14 @@ Call log:
 =========================== logs ===========================
   "domcontentloaded" event fired
 ============================================================
+2025-09-24T16:58:50+05:30 [error]: Error during attempt 1: page.goBack: Test timeout of 30000ms exceeded.
+Call log:
+[2m  - waiting for navigation until "load"[22m
+[2m    - navigated to "https://automationteststore.com/index.php?rt=product/category&path=49"[22m
+
+2025-09-24T17:00:44+05:30 [error]: Login fixture setup failed: page.waitForLoadState: Target page, context or browser has been closed
+2025-09-24T17:01:00+05:30 [error]: Login fixture setup failed: page.waitForURL: Target page, context or browser has been closed
+=========================== logs ===========================
+  "domcontentloaded" event fired
+============================================================
+2025-09-24T17:02:19+05:30 [error]: Login fixture setup failed: page.waitForLoadState: Target page, context or browser has been closed

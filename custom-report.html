@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Playwright — Custom HTML Report</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<style>
+  body{font-family:system-ui,Segoe UI,Roboto,Arial;margin:18px;color:#111}
+  h1{font-size:20px}
+  .summary {margin-bottom:12px}
+  table{width:100%;border-collapse:collapse}
+  th,td{padding:8px;border:1px solid #e5e7eb;text-align:left;vertical-align:top}
+  th{background:#f3f4f6}
+  .status.pass{color:green;font-weight:600}
+  .status.fail{color:#b91c1c;font-weight:700}
+  .status.skipped{color:#6b7280}
+  details pre{white-space:pre-wrap;background:#111827;color:#f8fafc;padding:8px;border-radius:6px;overflow:auto}
+  .scenario{width:22%}
+  .case{width:28%}
+  .duration{width:8%}
+  .error{width:30%}
+</style>
+</head>
+<body>
+  <h1>Playwright — Custom HTML Report</h1>
+  <div class="summary">
+    <strong>Started:</strong> Wed Sep 24 2025 16:56:02 GMT+0530 (India Standard Time)<br/>
+    <strong>Finished:</strong> Wed Sep 24 2025 17:03:10 GMT+0530 (India Standard Time)<br/>
+    <strong>Total:</strong> 55 &nbsp;&nbsp;
+    <strong>Passed:</strong> 23 &nbsp;&nbsp;
+    <strong>Failed:</strong> 16 &nbsp;&nbsp;
+    <strong>Skipped:</strong> 0
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Scenario (describe)</th>
+        <th>Test Case (title)</th>
+        <th>Status</th>
+        <th>Duration (ms)</th>
+        <th>Error (if failed)</th>
+        <th>Attachments</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr>
+          <td class="scenario"> › all › cart.spec.js › TS003 - Add to Cart Functionality Tests</td>
+          <td class="case">TS003-TC001: Verify adding single product to cart as guest user</td>
+          <td class="status pass">passed</td>
+          <td class="duration">21010</td>
+          <td class="error"></td>
+          <td class="attachments"></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › cart.spec.js › TS003 - Add to Cart Functionality Tests</td>
+          <td class="case">TS003-TC002: Verify adding single product to cart as logged-in user</td>
+          <td class="status skip">timedOut</td>
+          <td class="duration">33196</td>
+          <td class="error"><details><summary>[31mTest timeout of 30000ms exceeded.[39m</summary><pre>[31mTest timeout of 30000ms exceeded.[39m</pre></details></td>
+          <td class="attachments"><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-595f0-t-to-cart-as-logged-in-user-all%5Ctest-failed-1.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-595f0-t-to-cart-as-logged-in-user-all%5Ctest-failed-2.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-595f0-t-to-cart-as-logged-in-user-all%5Cvideo.webm" target="_blank">video</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-595f0-t-to-cart-as-logged-in-user-all%5Cerror-context.md" target="_blank">error-context</a></div></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › cart.spec.js › TS003 - Add to Cart Functionality Tests</td>
+          <td class="case">TS003-TC005: Verify adding maximum available stock to cart</td>
+          <td class="status pass">passed</td>
+          <td class="duration">6910</td>
+          <td class="error"></td>
+          <td class="attachments"></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › cart.spec.js › TS003 - Add to Cart Functionality Tests</td>
+          <td class="case">TS003-TC006: Verify adding quantity exceeding stock</td>
+          <td class="status pass">passed</td>
+          <td class="duration">7832</td>
+          <td class="error"></td>
+          <td class="attachments"></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › cart.spec.js › TS003 - Add to Cart Functionality Tests</td>
+          <td class="case">TS003-TC003: Verify adding multiple quantities of same product</td>
+          <td class="status skip">timedOut</td>
+          <td class="duration">30605</td>
+          <td class="error"><details><summary>[31mTest timeout of 30000ms exceeded while running &quot;beforeEach&quot; hook.[39m</summary><pre>[31mTest timeout of 30000ms exceeded while running &quot;beforeEach&quot; hook.[39m
+    at C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\tests\cart.spec.js:16:8</pre></details></td>
+          <td class="attachments"><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-a8426--quantities-of-same-product-all%5Ctest-failed-1.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-a8426--quantities-of-same-product-all%5Cvideo.webm" target="_blank">video</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-a8426--quantities-of-same-product-all%5Cerror-context.md" target="_blank">error-context</a></div></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › cart.spec.js › TS003 - Add to Cart Functionality Tests</td>
+          <td class="case">TS003-TC004: Verify adding different products to cart</td>
+          <td class="status fail">failed</td>
+          <td class="duration">28262</td>
+          <td class="error"><details><summary>Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+Expected: [32m1[39m
+Received: [31m2[39m</summary><pre>Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+Expected: [32m1[39m
+Received: [31m2[39m
+    at CartPage.verifyProductInCart (C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\pages\CartPage.js:157:44)
+    at C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\tests\cart.spec.js:138:5</pre></details></td>
+          <td class="attachments"><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-5a853--different-products-to-cart-all%5Ctest-failed-1.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-5a853--different-products-to-cart-all%5Cvideo.webm" target="_blank">video</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-5a853--different-products-to-cart-all%5Cerror-context.md" target="_blank">error-context</a></div></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › cart.spec.js › TS003 - Add to Cart Functionality Tests</td>
+          <td class="case">TS003-TC008: Verify adding product with zero quantity</td>
+          <td class="status fail">failed</td>
+          <td class="duration">27580</td>
+          <td class="error"><details><summary>TypeError: productPage.verifyStockStatus is not a function</summary><pre>TypeError: productPage.verifyStockStatus is not a function
+    at C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\tests\cart.spec.js:156:23</pre></details></td>
+          <td class="attachments"><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-8a8a6--product-with-zero-quantity-all%5Ctest-failed-1.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-8a8a6--product-with-zero-quantity-all%5Cvideo.webm" target="_blank">video</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-8a8a6--product-with-zero-quantity-all%5Cerror-context.md" target="_blank">error-context</a></div></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › cart.spec.js › TS003 - Add to Cart Functionality Tests</td>
+          <td class="case">TS003-TC009: Verify adding product with required options selected</td>
+          <td class="status skip">timedOut</td>
+          <td class="duration">31114</td>
+          <td class="error"><details><summary>[31mTest timeout of 30000ms exceeded.[39m</summary><pre>[31mTest timeout of 30000ms exceeded.[39m</pre></details></td>
+          <td class="attachments"><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-54b14-h-required-options-selected-all%5Ctest-failed-1.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-54b14-h-required-options-selected-all%5Cvideo.webm" target="_blank">video</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-54b14-h-required-options-selected-all%5Cerror-context.md" target="_blank">error-context</a></div></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › cart.spec.js › TS003 - Add to Cart Functionality Tests</td>
+          <td class="case">TS003-TC011: Verify cart persistence for logged-in user across sessions</td>
+          <td class="status fail">failed</td>
+          <td class="duration">6540</td>
+          <td class="error"><details><summary>TypeError: Cannot read properties of undefined (reading '0')</summary><pre>TypeError: Cannot read properties of undefined (reading '0')
+    at C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\tests\cart.spec.js:199:52</pre></details></td>
+          <td class="attachments"><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-ded6b-ged-in-user-across-sessions-all%5Ctest-failed-1.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-ded6b-ged-in-user-across-sessions-all%5Cvideo.webm" target="_blank">video</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-ded6b-ged-in-user-across-sessions-all%5Cerror-context.md" target="_blank">error-context</a></div></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › cart.spec.js › TS003 - Add to Cart Functionality Tests</td>
+          <td class="case">TS003-TC010: Verify adding same product with different variations</td>
+          <td class="status skip">timedOut</td>
+          <td class="duration">31128</td>
+          <td class="error"><details><summary>[31mTest timeout of 30000ms exceeded.[39m</summary><pre>[31mTest timeout of 30000ms exceeded.[39m</pre></details></td>
+          <td class="attachments"><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-8d40d-t-with-different-variations-all%5Ctest-failed-1.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-8d40d-t-with-different-variations-all%5Cvideo.webm" target="_blank">video</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-8d40d-t-with-different-variations-all%5Cerror-context.md" target="_blank">error-context</a></div></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › cart.spec.js › TS003 - Add to Cart Functionality Tests</td>
+          <td class="case">TS003-TC013: Verify cart contents when switching from guest to logged-in</td>
+          <td class="status fail">failed</td>
+          <td class="duration">8481</td>
+          <td class="error"><details><summary>TypeError: Cannot read properties of undefined (reading '0')</summary><pre>TypeError: Cannot read properties of undefined (reading '0')
+    at C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\tests\cart.spec.js:250:52</pre></details></td>
+          <td class="attachments"><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-9d855-ing-from-guest-to-logged-in-all%5Ctest-failed-1.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-9d855-ing-from-guest-to-logged-in-all%5Cvideo.webm" target="_blank">video</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-9d855-ing-from-guest-to-logged-in-all%5Cerror-context.md" target="_blank">error-context</a></div></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › cart.spec.js › TS003 - Add to Cart Functionality Tests</td>
+          <td class="case">TS003-TC015: Verify add to cart with network interruption</td>
+          <td class="status fail">failed</td>
+          <td class="duration">9246</td>
+          <td class="error"><details><summary>TypeError: Cannot read properties of undefined (reading '0')</summary><pre>TypeError: Cannot read properties of undefined (reading '0')
+    at C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\tests\cart.spec.js:288:52</pre></details></td>
+          <td class="attachments"><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-6f465-t-with-network-interruption-all%5Ctest-failed-1.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-6f465-t-with-network-interruption-all%5Cvideo.webm" target="_blank">video</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-6f465-t-with-network-interruption-all%5Cerror-context.md" target="_blank">error-context</a></div></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › cart.spec.js › TS003 - Add to Cart Functionality Tests</td>
+          <td class="case">TS003-TC012: Verify cart behavior for guest user session</td>
+          <td class="status fail">failed</td>
+          <td class="duration">21932</td>
+          <td class="error"><details><summary>TypeError: Cannot read properties of undefined (reading '0')</summary><pre>TypeError: Cannot read properties of undefined (reading '0')
+    at C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\tests\cart.spec.js:232:52</pre></details></td>
+          <td class="attachments"><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-724e7-vior-for-guest-user-session-all%5Ctest-failed-1.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-724e7-vior-for-guest-user-session-all%5Cvideo.webm" target="_blank">video</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-724e7-vior-for-guest-user-session-all%5Cerror-context.md" target="_blank">error-context</a></div></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › cart.spec.js › TS003 - Add to Cart Functionality Tests</td>
+          <td class="case">TS003-TC014: Verify add to cart from product listing pages</td>
+          <td class="status fail">failed</td>
+          <td class="duration">22723</td>
+          <td class="error"><details><summary>TypeError: homePage.getCartInfo is not a function</summary><pre>TypeError: homePage.getCartInfo is not a function
+    at C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\tests\cart.spec.js:280:37</pre></details></td>
+          <td class="attachments"><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-460d4--from-product-listing-pages-all%5Ctest-failed-1.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-460d4--from-product-listing-pages-all%5Cvideo.webm" target="_blank">video</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-460d4--from-product-listing-pages-all%5Cerror-context.md" target="_blank">error-context</a></div></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › cart.spec.js › TS003 - Add to Cart Functionality Tests</td>
+          <td class="case">TS003-TC017: Verify add to cart with invalid product ID</td>
+          <td class="status fail">failed</td>
+          <td class="duration">9392</td>
+          <td class="error"><details><summary>TypeError: homePage.getCartInfo is not a function</summary><pre>TypeError: homePage.getCartInfo is not a function
+    at C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\tests\cart.spec.js:328:37</pre></details></td>
+          <td class="attachments"><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-6ed65-art-with-invalid-product-ID-all%5Ctest-failed-1.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-6ed65-art-with-invalid-product-ID-all%5Cvideo.webm" target="_blank">video</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-6ed65-art-with-invalid-product-ID-all%5Cerror-context.md" target="_blank">error-context</a></div></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › cart.spec.js › TS003 - Add to Cart Functionality Tests</td>
+          <td class="case">TS003-TC018: Verify add to cart with price manipulation attempt</td>
+          <td class="status fail">failed</td>
+          <td class="duration">7800</td>
+          <td class="error"><details><summary>TypeError: Cannot read properties of undefined (reading '0')</summary><pre>TypeError: Cannot read properties of undefined (reading '0')
+    at C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\tests\cart.spec.js:333:52</pre></details></td>
+          <td class="attachments"><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-c08f5--price-manipulation-attempt-all%5Ctest-failed-1.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-c08f5--price-manipulation-attempt-all%5Cvideo.webm" target="_blank">video</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-c08f5--price-manipulation-attempt-all%5Cerror-context.md" target="_blank">error-context</a></div></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › cart.spec.js › TS003 - Add to Cart Functionality Tests</td>
+          <td class="case">TS003-TC016: Verify add to cart with maximum cart limit</td>
+          <td class="status fail">failed</td>
+          <td class="duration">25859</td>
+          <td class="error"><details><summary>TypeError: Cannot read properties of undefined (reading 'slice')</summary><pre>TypeError: Cannot read properties of undefined (reading 'slice')
+    at C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\tests\cart.spec.js:305:50</pre></details></td>
+          <td class="attachments"><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-b458c-art-with-maximum-cart-limit-all%5Ctest-failed-1.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-b458c-art-with-maximum-cart-limit-all%5Cvideo.webm" target="_blank">video</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-b458c-art-with-maximum-cart-limit-all%5Cerror-context.md" target="_blank">error-context</a></div></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › cart.spec.js › TS003 - Add to Cart Functionality Tests</td>
+          <td class="case">TS003-TC020: Verify add to cart with concurrent user sessions</td>
+          <td class="status fail">failed</td>
+          <td class="duration">8246</td>
+          <td class="error"><details><summary>TypeError: Cannot read properties of undefined (reading '0')</summary><pre>TypeError: Cannot read properties of undefined (reading '0')
+    at C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\tests\cart.spec.js:379:52</pre></details></td>
+          <td class="attachments"><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-a3367-th-concurrent-user-sessions-all%5Ctest-failed-1.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-a3367-th-concurrent-user-sessions-all%5Cvideo.webm" target="_blank">video</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-a3367-th-concurrent-user-sessions-all%5Cerror-context.md" target="_blank">error-context</a></div></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › cart.spec.js › TS003 - Add to Cart Functionality Tests</td>
+          <td class="case">TS003-TC019: Verify adding multiple random products to cart</td>
+          <td class="status skip">timedOut</td>
+          <td class="duration">30232</td>
+          <td class="error"><details><summary>[31mTest timeout of 30000ms exceeded.[39m</summary><pre>[31mTest timeout of 30000ms exceeded.[39m</pre></details></td>
+          <td class="attachments"><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-768f4-ple-random-products-to-cart-all%5Ctest-failed-1.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-768f4-ple-random-products-to-cart-all%5Cvideo.webm" target="_blank">video</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-768f4-ple-random-products-to-cart-all%5Cerror-context.md" target="_blank">error-context</a></div></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › cart.spec.js › TS003 - Add to Cart Functionality Tests</td>
+          <td class="case">TS003-TC007: Verify out-of-stock product cannot be added to cart</td>
+          <td class="status skip">timedOut</td>
+          <td class="duration">30288</td>
+          <td class="error"><details><summary>[31mTest timeout of 30000ms exceeded.[39m</summary><pre>[31mTest timeout of 30000ms exceeded.[39m</pre></details></td>
+          <td class="attachments"><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-8299a-uct-cannot-be-added-to-cart-all%5Ctest-failed-1.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-8299a-uct-cannot-be-added-to-cart-all%5Cvideo.webm" target="_blank">video</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Ccart-TS003---Add-to-Cart-F-8299a-uct-cannot-be-added-to-cart-all%5Cerror-context.md" target="_blank">error-context</a></div></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › auth.setup.js</td>
+          <td class="case">authenticate and store session</td>
+          <td class="status skip">timedOut</td>
+          <td class="duration">31138</td>
+          <td class="error"><details><summary>[31mTest timeout of 30000ms exceeded.[39m</summary><pre>[31mTest timeout of 30000ms exceeded.[39m</pre></details></td>
+          <td class="attachments"><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Cauth.setup.js-authenticate-and-store-session-all%5Ctest-failed-1.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Cauth.setup.js-authenticate-and-store-session-all%5Cvideo.webm" target="_blank">video</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Cauth.setup.js-authenticate-and-store-session-all%5Cerror-context.md" target="_blank">error-context</a></div></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › Checkout.spec.js › Checkout Functionality Tests - TS004</td>
+          <td class="case">TS004_TC01 - Verify single product checkout flow as guest user</td>
+          <td class="status fail">failed</td>
+          <td class="duration">25773</td>
+          <td class="error"><details><summary>Error: Authentication failed - redirected to login page. Please check storage state or login credentials.</summary><pre>Error: Authentication failed - redirected to login page. Please check storage state or login credentials.
+    at CheckoutPage.navigateToCheckout (C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\pages\CheckoutPage.js:47:19)
+    at C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\tests\Checkout.spec.js:37:5</pre></details></td>
+          <td class="attachments"><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5CCheckout-Checkout-Function-9f360-checkout-flow-as-guest-user-all%5Ctest-failed-1.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5CCheckout-Checkout-Function-9f360-checkout-flow-as-guest-user-all%5Cvideo.webm" target="_blank">video</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5CCheckout-Checkout-Function-9f360-checkout-flow-as-guest-user-all%5Cerror-context.md" target="_blank">error-context</a></div></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › Checkout.spec.js › Checkout Functionality Tests - TS004</td>
+          <td class="case">TS004_TC02 - Verify single product checkout flow as logged-in user</td>
+          <td class="status pass">passed</td>
+          <td class="duration">26562</td>
+          <td class="error"></td>
+          <td class="attachments"></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › Checkout.spec.js › Checkout Functionality Tests - TS004</td>
+          <td class="case">TS004_TC03 - Verify multiple product checkout flow as guest user</td>
+          <td class="status fail">failed</td>
+          <td class="duration">31883</td>
+          <td class="error"><details><summary>Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+Expected: [32m1[39m
+Received: [31m2[39m</summary><pre>Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+Expected: [32m1[39m
+Received: [31m2[39m
+    at CartPage.verifyProductInCart (C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\pages\CartPage.js:157:44)
+    at Object.verifyProductInCart (C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\fixtures\addProductToCartFixture.js:111:9)
+    at C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\tests\Checkout.spec.js:126:5</pre></details></td>
+          <td class="attachments"><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5CCheckout-Checkout-Function-0af42-checkout-flow-as-guest-user-all%5Ctest-failed-1.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5CCheckout-Checkout-Function-0af42-checkout-flow-as-guest-user-all%5Cvideo.webm" target="_blank">video</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5CCheckout-Checkout-Function-0af42-checkout-flow-as-guest-user-all%5Cerror-context.md" target="_blank">error-context</a></div></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › Checkout.spec.js › Checkout Functionality Tests - TS004</td>
+          <td class="case">TS004_TC02A - Verify shipping and payment addresses are auto-filled for registered user</td>
+          <td class="status skip">timedOut</td>
+          <td class="duration">33993</td>
+          <td class="error"><details><summary>[31mTest timeout of 30000ms exceeded.[39m</summary><pre>[31mTest timeout of 30000ms exceeded.[39m</pre></details></td>
+          <td class="attachments"><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5CCheckout-Checkout-Function-b2eae--filled-for-registered-user-all%5Ctest-failed-1.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5CCheckout-Checkout-Function-b2eae--filled-for-registered-user-all%5Cvideo.webm" target="_blank">video</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5CCheckout-Checkout-Function-b2eae--filled-for-registered-user-all%5Cerror-context.md" target="_blank">error-context</a></div></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › login.spec.js › TS001-Validate User Login Flow</td>
+          <td class="case">TS001_TC03 - Verify login fails with invalid username and valid password</td>
+          <td class="status pass">passed</td>
+          <td class="duration">8746</td>
+          <td class="error"></td>
+          <td class="attachments"></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › login.spec.js › TS001-Validate User Login Flow</td>
+          <td class="case">TS001_TC01 - Verify login page elements are displayed correctly</td>
+          <td class="status skip">timedOut</td>
+          <td class="duration">31263</td>
+          <td class="error"><details><summary>[31mTest timeout of 30000ms exceeded while running &quot;beforeEach&quot; hook.[39m</summary><pre>[31mTest timeout of 30000ms exceeded while running &quot;beforeEach&quot; hook.[39m
+    at C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\tests\login.spec.js:15:10</pre></details></td>
+          <td class="attachments"><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Clogin-TS001-Validate-User--2d2b0-nts-are-displayed-correctly-all%5Ctest-failed-1.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Clogin-TS001-Validate-User--2d2b0-nts-are-displayed-correctly-all%5Cvideo.webm" target="_blank">video</a></div></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › login.spec.js › TS001-Validate User Login Flow</td>
+          <td class="case">TS001_TC04 - Verify login with invalid password</td>
+          <td class="status pass">passed</td>
+          <td class="duration">8958</td>
+          <td class="error"></td>
+          <td class="attachments"></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › login.spec.js › TS001-Validate User Login Flow</td>
+          <td class="case">TS001_TC05 - Verify validation with empty username and valid password</td>
+          <td class="status pass">passed</td>
+          <td class="duration">10125</td>
+          <td class="error"></td>
+          <td class="attachments"></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › login.spec.js › TS001-Validate User Login Flow</td>
+          <td class="case">TS001_TC02 - Verify registered user can login successfully</td>
+          <td class="status fail">failed</td>
+          <td class="duration">29102</td>
+          <td class="error"><details><summary>Error: [2mexpect([22m[31mreceived[39m[2m).[22mresolves[2m.[22mtoBeTruthy[2m()[22m
+
+Received: [31mfalse[39m</summary><pre>Error: [2mexpect([22m[31mreceived[39m[2m).[22mresolves[2m.[22mtoBeTruthy[2m()[22m
+
+Received: [31mfalse[39m
+    at C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\tests\login.spec.js:46:69</pre></details></td>
+          <td class="attachments"><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Clogin-TS001-Validate-User--3c997-user-can-login-successfully-all%5Ctest-failed-1.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Clogin-TS001-Validate-User--3c997-user-can-login-successfully-all%5Cvideo.webm" target="_blank">video</a></div></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › login.spec.js › TS001-Validate User Login Flow</td>
+          <td class="case">TS001_TC06 - Verify login with empty fields</td>
+          <td class="status pass">passed</td>
+          <td class="duration">11344</td>
+          <td class="error"></td>
+          <td class="attachments"></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › login.spec.js › TS001-Validate User Login Flow</td>
+          <td class="case">TS001_TC07 - Verify login with special characters in username and password</td>
+          <td class="status pass">passed</td>
+          <td class="duration">9338</td>
+          <td class="error"></td>
+          <td class="attachments"></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › login.spec.js › TS001-Validate User Login Flow</td>
+          <td class="case">TS001_TC08 - Verify login with different case combinations</td>
+          <td class="status fail">failed</td>
+          <td class="duration">11549</td>
+          <td class="error"><details><summary>TypeError: Cannot read properties of undefined (reading 'clickContinue')</summary><pre>TypeError: Cannot read properties of undefined (reading 'clickContinue')
+    at C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\tests\login.spec.js:132:30</pre></details></td>
+          <td class="attachments"><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Clogin-TS001-Validate-User--a4f7f-different-case-combinations-all%5Ctest-failed-1.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Clogin-TS001-Validate-User--a4f7f-different-case-combinations-all%5Cvideo.webm" target="_blank">video</a></div></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › login.spec.js › TS001-Validate User Login Flow</td>
+          <td class="case">TS001_TC10 - Verify behavior after multiple failed login attempts</td>
+          <td class="status pass">passed</td>
+          <td class="duration">16685</td>
+          <td class="error"></td>
+          <td class="attachments"></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › login.spec.js › TS001-Validate User Login Flow</td>
+          <td class="case">TS001_TC09 - Verify user session management after login</td>
+          <td class="status fail">failed</td>
+          <td class="duration">18003</td>
+          <td class="error"><details><summary>Error: locator.click: Error: strict mode violation: getByRole('link', { name: 'Account' }) resolved to 2 elements:
+    1) &lt;a class=&quot;top menu_account&quot; href=&quot;https://automationteststore.com/index.php?rt=account/account&quot;&gt;…&lt;/a&gt; aka getByRole('link', { name: '  Account' })
+    2) &lt;a href=&quot;https://automationteststore.com/index.php?rt=account/account&quot;&gt;Account&lt;/a&gt; aka getByRole('link', { name: 'Account', exact: true })
+
+Call log:
+[2m  - waiting for getByRole('link', { name: 'Account' })[22m
+</summary><pre>Error: locator.click: Error: strict mode violation: getByRole('link', { name: 'Account' }) resolved to 2 elements:
+    1) &lt;a class=&quot;top menu_account&quot; href=&quot;https://automationteststore.com/index.php?rt=account/account&quot;&gt;…&lt;/a&gt; aka getByRole('link', { name: '  Account' })
+    2) &lt;a href=&quot;https://automationteststore.com/index.php?rt=account/account&quot;&gt;Account&lt;/a&gt; aka getByRole('link', { name: 'Account', exact: true })
+
+Call log:
+[2m  - waiting for getByRole('link', { name: 'Account' })[22m
+
+    at HomePage.goToAccount (C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\pages\HomePage.js:32:32)
+    at C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\tests\login.spec.js:159:24</pre></details></td>
+          <td class="attachments"><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Clogin-TS001-Validate-User--c8428-sion-management-after-login-all%5Ctest-failed-1.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Clogin-TS001-Validate-User--c8428-sion-management-after-login-all%5Cvideo.webm" target="_blank">video</a></div></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › login.spec.js › TS001-Validate User Login Flow</td>
+          <td class="case">TS001_TC11 - Verify login session timeout</td>
+          <td class="status pass">passed</td>
+          <td class="duration">16968</td>
+          <td class="error"></td>
+          <td class="attachments"></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › login.spec.js › TS001-Validate User Login Flow</td>
+          <td class="case">TS001_TC12 - Verify login redirection from checkout page</td>
+          <td class="status pass">passed</td>
+          <td class="duration">16915</td>
+          <td class="error"></td>
+          <td class="attachments"></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › search.spec.js › Search Functionality Tests</td>
+          <td class="case">TC002_002 - Verify product search with invalid/non-existent product</td>
+          <td class="status pass">passed</td>
+          <td class="duration">18423</td>
+          <td class="error"></td>
+          <td class="attachments"></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › search.spec.js › Search Functionality Tests</td>
+          <td class="case">TC002_001 - Verify product search with valid product name</td>
+          <td class="status skip">timedOut</td>
+          <td class="duration">30923</td>
+          <td class="error"><details><summary>[31mTest timeout of 30000ms exceeded while running &quot;beforeEach&quot; hook.[39m</summary><pre>[31mTest timeout of 30000ms exceeded while running &quot;beforeEach&quot; hook.[39m
+    at C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\tests\search.spec.js:12:10</pre></details></td>
+          <td class="attachments"><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Csearch-Search-Functionalit-5b994-rch-with-valid-product-name-all%5Ctest-failed-1.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Csearch-Search-Functionalit-5b994-rch-with-valid-product-name-all%5Cvideo.webm" target="_blank">video</a></div></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › search.spec.js › Search Functionality Tests</td>
+          <td class="case">TC002_003 - Verify product search with empty search field</td>
+          <td class="status skip">timedOut</td>
+          <td class="duration">31168</td>
+          <td class="error"><details><summary>[31mTest timeout of 30000ms exceeded while running &quot;beforeEach&quot; hook.[39m</summary><pre>[31mTest timeout of 30000ms exceeded while running &quot;beforeEach&quot; hook.[39m
+    at C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\tests\search.spec.js:12:10</pre></details></td>
+          <td class="attachments"><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Csearch-Search-Functionalit-57174-rch-with-empty-search-field-all%5Ctest-failed-1.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Csearch-Search-Functionalit-57174-rch-with-empty-search-field-all%5Cvideo.webm" target="_blank">video</a></div></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › search.spec.js › Search Functionality Tests</td>
+          <td class="case">TC002_005 - Verify product search with numbers</td>
+          <td class="status pass">passed</td>
+          <td class="duration">16125</td>
+          <td class="error"></td>
+          <td class="attachments"></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › search.spec.js › Search Functionality Tests</td>
+          <td class="case">TC002_004 - Verify product search with special characters</td>
+          <td class="status pass">passed</td>
+          <td class="duration">22144</td>
+          <td class="error"></td>
+          <td class="attachments"></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › search.spec.js › Search Functionality Tests</td>
+          <td class="case">TC002_006 - Verify case-insensitive search</td>
+          <td class="status pass">passed</td>
+          <td class="duration">18097</td>
+          <td class="error"></td>
+          <td class="attachments"></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › search.spec.js › Search Functionality Tests</td>
+          <td class="case">TC002_007 - Verify search with maximum character limit</td>
+          <td class="status pass">passed</td>
+          <td class="duration">20582</td>
+          <td class="error"></td>
+          <td class="attachments"></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › search.spec.js › Search Functionality Tests</td>
+          <td class="case">TC002_008 - Verify search results pagination</td>
+          <td class="status pass">passed</td>
+          <td class="duration">19475</td>
+          <td class="error"></td>
+          <td class="attachments"></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › search.spec.js › Search Functionality Tests</td>
+          <td class="case">TC002_009 - Verify search results sorting functionality</td>
+          <td class="status pass">passed</td>
+          <td class="duration">17568</td>
+          <td class="error"></td>
+          <td class="attachments"></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › search.spec.js › Search Functionality Tests</td>
+          <td class="case">TC002_011 - Verify search suggestions/autocomplete</td>
+          <td class="status pass">passed</td>
+          <td class="duration">17350</td>
+          <td class="error"></td>
+          <td class="attachments"></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › search.spec.js › Search Functionality Tests</td>
+          <td class="case">TC002_010 - Verify search results filtering</td>
+          <td class="status pass">passed</td>
+          <td class="duration">23414</td>
+          <td class="error"></td>
+          <td class="attachments"></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › search.spec.js › Search Functionality Tests</td>
+          <td class="case">TC002_012 - Verify search from different pages</td>
+          <td class="status skip">timedOut</td>
+          <td class="duration">30115</td>
+          <td class="error"><details><summary>[31mTest timeout of 30000ms exceeded.[39m</summary><pre>[31mTest timeout of 30000ms exceeded.[39m</pre></details></td>
+          <td class="attachments"><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Csearch-Search-Functionalit-61597-search-from-different-pages-all%5Ctest-failed-1.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Csearch-Search-Functionalit-61597-search-from-different-pages-all%5Cvideo.webm" target="_blank">video</a></div></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › search.spec.js › Search Functionality Tests</td>
+          <td class="case">TC002_013 - Verify search timeout handling</td>
+          <td class="status pass">passed</td>
+          <td class="duration">24131</td>
+          <td class="error"></td>
+          <td class="attachments"></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › search.spec.js › Search Functionality Tests</td>
+          <td class="case">TC002_014 - Verify product search without user login (Guest user)</td>
+          <td class="status skip">timedOut</td>
+          <td class="duration">32932</td>
+          <td class="error"><details><summary>[31mTest timeout of 30000ms exceeded while running &quot;beforeEach&quot; hook.[39m</summary><pre>[31mTest timeout of 30000ms exceeded while running &quot;beforeEach&quot; hook.[39m
+    at C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\tests\search.spec.js:12:10</pre></details></td>
+          <td class="attachments"><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Csearch-Search-Functionalit-551c8-hout-user-login-Guest-user--all%5Ctest-failed-1.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Csearch-Search-Functionalit-551c8-hout-user-login-Guest-user--all%5Cvideo.webm" target="_blank">video</a></div></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › search.spec.js › Search Functionality Tests</td>
+          <td class="case">TC002_018 - Verify search accessibility from login/register pages</td>
+          <td class="status skip">timedOut</td>
+          <td class="duration">30215</td>
+          <td class="error"><details><summary>[31mTest timeout of 30000ms exceeded while running &quot;beforeEach&quot; hook.[39m</summary><pre>[31mTest timeout of 30000ms exceeded while running &quot;beforeEach&quot; hook.[39m
+    at C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\tests\search.spec.js:12:10</pre></details></td>
+          <td class="attachments"><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Csearch-Search-Functionalit-b19c2-y-from-login-register-pages-all%5Ctest-failed-1.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Csearch-Search-Functionalit-b19c2-y-from-login-register-pages-all%5Cvideo.webm" target="_blank">video</a></div></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › search.spec.js › Search Functionality Tests - Authenticated User</td>
+          <td class="case">TC002_015 - Verify product search with logged-in user </td>
+          <td class="status skip">timedOut</td>
+          <td class="duration">30119</td>
+          <td class="error"><details><summary>[31mTest timeout of 30000ms exceeded while running &quot;beforeEach&quot; hook.[39m</summary><pre>[31mTest timeout of 30000ms exceeded while running &quot;beforeEach&quot; hook.[39m
+    at C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\tests\search.spec.js:267:10</pre></details></td>
+          <td class="attachments"><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Csearch-Search-Functionalit-8e5d3-search-with-logged-in-user--all%5Ctest-failed-1.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Csearch-Search-Functionalit-8e5d3-search-with-logged-in-user--all%5Cvideo.webm" target="_blank">video</a></div></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › search.spec.js › Search Functionality Tests - Authenticated User</td>
+          <td class="case">TC002_017 - Verify search history/suggestions for logged-in users )</td>
+          <td class="status pass">passed</td>
+          <td class="duration">20558</td>
+          <td class="error"></td>
+          <td class="attachments"></td>
+        </tr>
+
+        <tr>
+          <td class="scenario"> › all › search.spec.js › Search Functionality Tests - Authenticated User</td>
+          <td class="case">TC002_016 - Verify search functionality consistency between guest and logged-in users (using stored context)</td>
+          <td class="status skip">timedOut</td>
+          <td class="duration">30384</td>
+          <td class="error"><details><summary>[31mTest timeout of 30000ms exceeded.[39m</summary><pre>[31mTest timeout of 30000ms exceeded.[39m</pre></details></td>
+          <td class="attachments"><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Csearch-Search-Functionalit-13db4-users-using-stored-context--all%5Ctest-failed-1.png" target="_blank">screenshot</a></div><div><a href="C:%5CUsers%5CAcer%5CDesktop%5CInterviewAss%5Csonasu%5CUIAutomation%5Ctest-results%5Csearch-Search-Functionalit-13db4-users-using-stored-context--all%5Cvideo.webm" target="_blank">video</a></div></td>
+        </tr>
+    </tbody>
+  </table>
+</body>
+</html>

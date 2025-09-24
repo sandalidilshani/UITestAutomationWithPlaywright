@@ -2236,3 +2236,1226 @@ Call log:
   "domcontentloaded" event fired
 ============================================================
 2025-09-24T16:42:03+05:30 [info]: Guest fixture setup completed successfully
+2025-09-24T16:57:13+05:30 [info]: Setting up random product category fixture
+2025-09-24T16:57:17+05:30 [info]: Navigated to subnav category: 
+    	
+    		Home
+
+    			
+    				
+    					    					
+    					 Specials
+ Account
+
+ Login
+ Check Your Order
+
+
+ Cart
+ Checkout
+    				
+    			
+    		
+    		  		
+    			    				  Apparel & accessories
+    					    					    						
+    						
+    							
+    								     									    Shoes
+    									
+    									
+    								     									    T-shirts
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Makeup
+    					    					    						
+    						
+    							
+    								     									    Cheeks
+    									
+    									
+    								     									    Eyes
+    									
+    									
+    								     									    Face
+    									
+    									
+    								     									    Lips
+    									
+    									
+    								     									    Nails
+    									
+    									
+    								     									    Value Sets
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Skincare
+    					    					    						
+    						
+    							
+    								     									    Eyes
+    									
+    									
+    								     									    Face
+    									
+    									
+    								     									    Gift Ideas & Sets
+    									
+    									
+    								     									    Hands & Nails
+    									
+    									
+    								     									    Sun
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Fragrance
+    					    					    						
+    						
+    							
+    								     									    Men
+    									
+    									
+    								     									    Women
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Men
+    					    					    						
+    						
+    							
+    								     									    Body & Shower
+    									
+    									
+    								     									    Fragrance Sets
+    									
+    									
+    								     									    Pre-Shave & Shaving
+    									
+    									
+    								     									    Skincare
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Hair Care
+    					    					    						
+    						
+    							
+    								     									    Conditioner
+    									
+    									
+    								     									    Shampoo
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Books
+    					    					    						
+    						
+    							
+    								     									    Audio CD
+    									
+    									
+    								     									    Paperback
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    		    	
+    Go to...Home Specials Account Login Check Your Order Cart Checkout  Apparel & accessories    Shoes    T-shirts  Makeup    Cheeks    Eyes    Face    Lips    Nails    Value Sets  Skincare    Eyes    Face    Gift Ideas & Sets    Hands & Nails    Sun  Fragrance    Men    Women  Men    Body & Shower    Fragrance Sets    Pre-Shave & Shaving    Skincare  Hair Care    Conditioner    Shampoo  Books    Audio CD    Paperback
+2025-09-24T16:57:48+05:30 [info]: Setting up random product category fixture
+2025-09-24T16:57:51+05:30 [info]: Navigated to subnav category: 
+    	
+    		Home
+
+    			
+    				
+    					    					
+    					 Specials
+ Account
+
+ Login
+ Check Your Order
+
+
+ Cart
+ Checkout
+    				
+    			
+    		
+    		  		
+    			    				  Apparel & accessories
+    					    					    						
+    						
+    							
+    								     									    Shoes
+    									
+    									
+    								     									    T-shirts
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Makeup
+    					    					    						
+    						
+    							
+    								     									    Cheeks
+    									
+    									
+    								     									    Eyes
+    									
+    									
+    								     									    Face
+    									
+    									
+    								     									    Lips
+    									
+    									
+    								     									    Nails
+    									
+    									
+    								     									    Value Sets
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Skincare
+    					    					    						
+    						
+    							
+    								     									    Eyes
+    									
+    									
+    								     									    Face
+    									
+    									
+    								     									    Gift Ideas & Sets
+    									
+    									
+    								     									    Hands & Nails
+    									
+    									
+    								     									    Sun
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Fragrance
+    					    					    						
+    						
+    							
+    								     									    Men
+    									
+    									
+    								     									    Women
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Men
+    					    					    						
+    						
+    							
+    								     									    Body & Shower
+    									
+    									
+    								     									    Fragrance Sets
+    									
+    									
+    								     									    Pre-Shave & Shaving
+    									
+    									
+    								     									    Skincare
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Hair Care
+    					    					    						
+    						
+    							
+    								     									    Conditioner
+    									
+    									
+    								     									    Shampoo
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Books
+    					    					    						
+    						
+    							
+    								     									    Audio CD
+    									
+    									
+    								     									    Paperback
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    		    	
+    Go to...Home Specials Account Login Check Your Order Cart Checkout  Apparel & accessories    Shoes    T-shirts  Makeup    Cheeks    Eyes    Face    Lips    Nails    Value Sets  Skincare    Eyes    Face    Gift Ideas & Sets    Hands & Nails    Sun  Fragrance    Men    Women  Men    Body & Shower    Fragrance Sets    Pre-Shave & Shaving    Skincare  Hair Care    Conditioner    Shampoo  Books    Audio CD    Paperback
+2025-09-24T16:58:12+05:30 [info]: Setting up random product category fixture
+2025-09-24T16:58:17+05:30 [info]: Navigated to subnav category: 
+    	
+    		Home
+
+    			
+    				
+    					    					
+    					 Specials
+ Account
+
+ Login
+ Check Your Order
+
+
+ Cart
+ Checkout
+    				
+    			
+    		
+    		  		
+    			    				  Apparel & accessories
+    					    					    						
+    						
+    							
+    								     									    Shoes
+    									
+    									
+    								     									    T-shirts
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Makeup
+    					    					    						
+    						
+    							
+    								     									    Cheeks
+    									
+    									
+    								     									    Eyes
+    									
+    									
+    								     									    Face
+    									
+    									
+    								     									    Lips
+    									
+    									
+    								     									    Nails
+    									
+    									
+    								     									    Value Sets
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Skincare
+    					    					    						
+    						
+    							
+    								     									    Eyes
+    									
+    									
+    								     									    Face
+    									
+    									
+    								     									    Gift Ideas & Sets
+    									
+    									
+    								     									    Hands & Nails
+    									
+    									
+    								     									    Sun
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Fragrance
+    					    					    						
+    						
+    							
+    								     									    Men
+    									
+    									
+    								     									    Women
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Men
+    					    					    						
+    						
+    							
+    								     									    Body & Shower
+    									
+    									
+    								     									    Fragrance Sets
+    									
+    									
+    								     									    Pre-Shave & Shaving
+    									
+    									
+    								     									    Skincare
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Hair Care
+    					    					    						
+    						
+    							
+    								     									    Conditioner
+    									
+    									
+    								     									    Shampoo
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Books
+    					    					    						
+    						
+    							
+    								     									    Audio CD
+    									
+    									
+    								     									    Paperback
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    		    	
+    Go to...Home Specials Account Login Check Your Order Cart Checkout  Apparel & accessories    Shoes    T-shirts  Makeup    Cheeks    Eyes    Face    Lips    Nails    Value Sets  Skincare    Eyes    Face    Gift Ideas & Sets    Hands & Nails    Sun  Fragrance    Men    Women  Men    Body & Shower    Fragrance Sets    Pre-Shave & Shaving    Skincare  Hair Care    Conditioner    Shampoo  Books    Audio CD    Paperback
+2025-09-24T16:58:30+05:30 [info]: Navigated to subnav category: 
+    	
+    		Home
+
+    			
+    				
+    					    					
+    					 Specials
+ Account
+
+ Login
+ Check Your Order
+
+
+ Cart
+ Checkout
+    				
+    			
+    		
+    		  		
+    			    				  Apparel & accessories
+    					    					    						
+    						
+    							
+    								     									    Shoes
+    									
+    									
+    								     									    T-shirts
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Makeup
+    					    					    						
+    						
+    							
+    								     									    Cheeks
+    									
+    									
+    								     									    Eyes
+    									
+    									
+    								     									    Face
+    									
+    									
+    								     									    Lips
+    									
+    									
+    								     									    Nails
+    									
+    									
+    								     									    Value Sets
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Skincare
+    					    					    						
+    						
+    							
+    								     									    Eyes
+    									
+    									
+    								     									    Face
+    									
+    									
+    								     									    Gift Ideas & Sets
+    									
+    									
+    								     									    Hands & Nails
+    									
+    									
+    								     									    Sun
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Fragrance
+    					    					    						
+    						
+    							
+    								     									    Men
+    									
+    									
+    								     									    Women
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Men
+    					    					    						
+    						
+    							
+    								     									    Body & Shower
+    									
+    									
+    								     									    Fragrance Sets
+    									
+    									
+    								     									    Pre-Shave & Shaving
+    									
+    									
+    								     									    Skincare
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Hair Care
+    					    					    						
+    						
+    							
+    								     									    Conditioner
+    									
+    									
+    								     									    Shampoo
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Books
+    					    					    						
+    						
+    							
+    								     									    Audio CD
+    									
+    									
+    								     									    Paperback
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    		    	
+    Go to...Home Specials Account Login Check Your Order Cart Checkout  Apparel & accessories    Shoes    T-shirts  Makeup    Cheeks    Eyes    Face    Lips    Nails    Value Sets  Skincare    Eyes    Face    Gift Ideas & Sets    Hands & Nails    Sun  Fragrance    Men    Women  Men    Body & Shower    Fragrance Sets    Pre-Shave & Shaving    Skincare  Hair Care    Conditioner    Shampoo  Books    Audio CD    Paperback
+2025-09-24T16:58:39+05:30 [info]: Setting up random product category fixture
+2025-09-24T16:58:39+05:30 [info]: Starting search for out-of-stock products
+2025-09-24T16:58:39+05:30 [info]: Attempt 1: Searching for out-of-stock product
+2025-09-24T16:58:45+05:30 [info]: Navigated to subnav category: 
+    	
+    		Home
+
+    			
+    				
+    					    					
+    					 Specials
+ Account
+
+ Login
+ Check Your Order
+
+
+ Cart
+ Checkout
+    				
+    			
+    		
+    		  		
+    			    				  Apparel & accessories
+    					    					    						
+    						
+    							
+    								     									    Shoes
+    									
+    									
+    								     									    T-shirts
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Makeup
+    					    					    						
+    						
+    							
+    								     									    Cheeks
+    									
+    									
+    								     									    Eyes
+    									
+    									
+    								     									    Face
+    									
+    									
+    								     									    Lips
+    									
+    									
+    								     									    Nails
+    									
+    									
+    								     									    Value Sets
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Skincare
+    					    					    						
+    						
+    							
+    								     									    Eyes
+    									
+    									
+    								     									    Face
+    									
+    									
+    								     									    Gift Ideas & Sets
+    									
+    									
+    								     									    Hands & Nails
+    									
+    									
+    								     									    Sun
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Fragrance
+    					    					    						
+    						
+    							
+    								     									    Men
+    									
+    									
+    								     									    Women
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Men
+    					    					    						
+    						
+    							
+    								     									    Body & Shower
+    									
+    									
+    								     									    Fragrance Sets
+    									
+    									
+    								     									    Pre-Shave & Shaving
+    									
+    									
+    								     									    Skincare
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Hair Care
+    					    					    						
+    						
+    							
+    								     									    Conditioner
+    									
+    									
+    								     									    Shampoo
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Books
+    					    					    						
+    						
+    							
+    								     									    Audio CD
+    									
+    									
+    								     									    Paperback
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    		    	
+    Go to...Home Specials Account Login Check Your Order Cart Checkout  Apparel & accessories    Shoes    T-shirts  Makeup    Cheeks    Eyes    Face    Lips    Nails    Value Sets  Skincare    Eyes    Face    Gift Ideas & Sets    Hands & Nails    Sun  Fragrance    Men    Women  Men    Body & Shower    Fragrance Sets    Pre-Shave & Shaving    Skincare  Hair Care    Conditioner    Shampoo  Books    Audio CD    Paperback
+2025-09-24T16:58:45+05:30 [info]: Searching in category: Home
+
+    			
+    				
+    					    					
+    					 Specials
+ Account
+
+ Login
+ Check Your Order
+
+
+ Cart
+ Checkout
+    				
+    			
+    		
+    		  		
+    			    				  Apparel & accessories
+    					    					    						
+    						
+    							
+    								     									    Shoes
+    									
+    									
+    								     									    T-shirts
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Makeup
+    					    					    						
+    						
+    							
+    								     									    Cheeks
+    									
+    									
+    								     									    Eyes
+    									
+    									
+    								     									    Face
+    									
+    									
+    								     									    Lips
+    									
+    									
+    								     									    Nails
+    									
+    									
+    								     									    Value Sets
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Skincare
+    					    					    						
+    						
+    							
+    								     									    Eyes
+    									
+    									
+    								     									    Face
+    									
+    									
+    								     									    Gift Ideas & Sets
+    									
+    									
+    								     									    Hands & Nails
+    									
+    									
+    								     									    Sun
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Fragrance
+    					    					    						
+    						
+    							
+    								     									    Men
+    									
+    									
+    								     									    Women
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Men
+    					    					    						
+    						
+    							
+    								     									    Body & Shower
+    									
+    									
+    								     									    Fragrance Sets
+    									
+    									
+    								     									    Pre-Shave & Shaving
+    									
+    									
+    								     									    Skincare
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Hair Care
+    					    					    						
+    						
+    							
+    								     									    Conditioner
+    									
+    									
+    								     									    Shampoo
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Books
+    					    					    						
+    						
+    							
+    								     									    Audio CD
+    									
+    									
+    								     									    Paperback
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    		    	
+    Go to...Home Specials Account Login Check Your Order Cart Checkout  Apparel & accessories    Shoes    T-shirts  Makeup    Cheeks    Eyes    Face    Lips    Nails    Value Sets  Skincare    Eyes    Face    Gift Ideas & Sets    Hands & Nails    Sun  Fragrance    Men    Women  Men    Body & Shower    Fragrance Sets    Pre-Shave & Shaving    Skincare  Hair Care    Conditioner    Shampoo  Books    Audio CD    Paperback
+2025-09-24T16:58:50+05:30 [error]: Error during attempt 1: page.goBack: Test timeout of 30000ms exceeded.
+Call log:
+[2m  - waiting for navigation until "load"[22m
+[2m    - navigated to "https://automationteststore.com/index.php?rt=product/category&path=49"[22m
+
+2025-09-24T17:00:14+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T17:00:26+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T17:00:29+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T17:00:39+05:30 [info]: Login fixture setup completed successfully
+2025-09-24T17:00:44+05:30 [error]: Login fixture setup failed: page.waitForLoadState: Target page, context or browser has been closed
+2025-09-24T17:00:45+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T17:00:47+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T17:00:57+05:30 [info]: Login fixture setup completed successfully
+2025-09-24T17:01:00+05:30 [error]: Login fixture setup failed: page.waitForURL: Target page, context or browser has been closed
+=========================== logs ===========================
+  "domcontentloaded" event fired
+============================================================
+2025-09-24T17:01:01+05:30 [info]: Login fixture setup completed successfully
+2025-09-24T17:01:02+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T17:01:03+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T17:01:07+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T17:01:12+05:30 [info]: Login fixture setup completed successfully
+2025-09-24T17:01:17+05:30 [info]: Login fixture setup completed successfully
+2025-09-24T17:01:19+05:30 [info]: Login fixture setup completed successfully
+2025-09-24T17:01:20+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T17:01:23+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T17:01:26+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T17:01:30+05:30 [info]: Login fixture setup completed successfully
+2025-09-24T17:01:36+05:30 [info]: Login fixture setup completed successfully
+2025-09-24T17:01:37+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T17:01:41+05:30 [info]: Login fixture setup completed successfully
+2025-09-24T17:01:44+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T17:01:47+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T17:01:56+05:30 [info]: Login fixture setup completed successfully
+2025-09-24T17:02:02+05:30 [info]: Login fixture setup completed successfully
+2025-09-24T17:02:08+05:30 [info]: Setting up guest fixture - no authentication required
+2025-09-24T17:02:09+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T17:02:19+05:30 [error]: Login fixture setup failed: page.waitForLoadState: Target page, context or browser has been closed
+2025-09-24T17:02:21+05:30 [info]: Setting up guest fixture - no authentication required
+2025-09-24T17:02:34+05:30 [info]: Guest fixture setup completed successfully
+2025-09-24T17:02:36+05:30 [info]: Login fixture setup completed successfully
+2025-09-24T17:02:40+05:30 [info]: Setting up guest fixture - no authentication required
+2025-09-24T17:02:53+05:30 [info]: Guest fixture setup completed successfully
