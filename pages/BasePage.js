@@ -4,8 +4,8 @@ class BasePage {
         this.page = page;
         this.baseUrl = config.app.baseUrl;
     }
-    async navigateTo(url) {
-        await this.page.goto(url);
+    async navigateTo(url = this.baseUrl) {
+        await this.page.goto(url, { waitUntil: 'domcontentloaded' });
     }
     async getTitle() {
         return await this.page.title();

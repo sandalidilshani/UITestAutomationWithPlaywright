@@ -19,10 +19,6 @@ test.describe('TS001-Validate User Login Flow', () => {
         await homePage.navigate();
     });
 
-    test.afterEach(async ({ page }) => {
-        await page.close();
-    });
-
     test('TS001_TC01 - Verify login page elements are displayed correctly', async ({ page }) => {
         await homePage.clickLoginOrRegister();
         await expect(loginPage.accountLoginHeading).toBeVisible();
@@ -214,7 +210,7 @@ test.describe('TS001-Validate User Login Flow', () => {
     });
 
     test('TS001_TC12 - Verify login redirection from checkout page', async ({ page }) => {
-        await page.goto('https://automationteststore.com/index.php?rt=product/product&product_id=50');
+        await page.goto('/index.php?rt=product/product&product_id=50');
         
         const addToCartButton = page.locator('.cart, [title*="Add to Cart"], .productcart');
         if (await addToCartButton.isVisible()) {

@@ -3,7 +3,8 @@
 require('dotenv').config({ 
     path: process.env.NODE_ENV 
         ? `${__dirname}/.env.${process.env.NODE_ENV}` 
-        : `${__dirname}/.env`
+        : `${__dirname}/.env`,
+    debug: false
 });
 
 const config = {
