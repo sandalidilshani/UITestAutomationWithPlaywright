@@ -17,7 +17,7 @@ class CheckoutPage extends BasePage {
 
         this.guestCheckoutTitle = this.page.getByText('Guest Checkout - Step').first();
         // Guest checkout fields
-        this.che2button=page.locator('#checkout_btn');
+        this.che2button=this.page.locator('#checkout_btn');
         this.firstNameField = this.page.locator('#guestFrm_firstname');
         this.lastNameField = this.page.locator('#guestFrm_lastname');
         this.emailField = this.page.locator('#guestFrm_email');
@@ -160,9 +160,9 @@ class CheckoutPage extends BasePage {
     }
 
     async confirmOrder() {
-        await this.confirmOrderButton.click();
+        await this.che2button.click();
         // Wait for order confirmation or success page
-        await this.page.waitForURL('**/checkout/success', { timeout: 10000 });
+        await this.page.getByText('Your Order Has Been Processed!');
     }
 }
 

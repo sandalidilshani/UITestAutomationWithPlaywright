@@ -1999,3 +1999,240 @@ Call log:
 2025-09-24T12:06:15+05:30 [info]: Setting up authentication for search tests
 2025-09-24T12:06:26+05:30 [info]: Setting up authentication for search tests
 2025-09-24T12:06:32+05:30 [info]: Authentication state saved successfully at: C:\Users\Acer\Desktop\InterviewAss\sonasu\UIAutomation\tests\storeLoginContext\storageState.json
+2025-09-24T16:37:56+05:30 [info]: Setting up random product category fixture
+2025-09-24T16:38:01+05:30 [info]: Navigated to subnav category: 
+    	
+    		Home
+
+    			
+    				
+    					    					
+    					 Specials
+ Account
+
+ Login
+ Check Your Order
+
+
+ Cart
+ Checkout
+    				
+    			
+    		
+    		  		
+    			    				  Apparel & accessories
+    					    					    						
+    						
+    							
+    								     									    Shoes
+    									
+    									
+    								     									    T-shirts
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Makeup
+    					    					    						
+    						
+    							
+    								     									    Cheeks
+    									
+    									
+    								     									    Eyes
+    									
+    									
+    								     									    Face
+    									
+    									
+    								     									    Lips
+    									
+    									
+    								     									    Nails
+    									
+    									
+    								     									    Value Sets
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Skincare
+    					    					    						
+    						
+    							
+    								     									    Eyes
+    									
+    									
+    								     									    Face
+    									
+    									
+    								     									    Gift Ideas & Sets
+    									
+    									
+    								     									    Hands & Nails
+    									
+    									
+    								     									    Sun
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Fragrance
+    					    					    						
+    						
+    							
+    								     									    Men
+    									
+    									
+    								     									    Women
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Men
+    					    					    						
+    						
+    							
+    								     									    Body & Shower
+    									
+    									
+    								     									    Fragrance Sets
+    									
+    									
+    								     									    Pre-Shave & Shaving
+    									
+    									
+    								     									    Skincare
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Hair Care
+    					    					    						
+    						
+    							
+    								     									    Conditioner
+    									
+    									
+    								     									    Shampoo
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    				  Books
+    					    					    						
+    						
+    							
+    								     									    Audio CD
+    									
+    									
+    								     									    Paperback
+    									
+    									
+    								    							
+    							    								
+    									
+										    
+    									
+    									
+										    
+    									
+    								
+    							    						
+    					    				
+    			    		    	
+    Go to...Home Specials Account Login Check Your Order Cart Checkout  Apparel & accessories    Shoes    T-shirts  Makeup    Cheeks    Eyes    Face    Lips    Nails    Value Sets  Skincare    Eyes    Face    Gift Ideas & Sets    Hands & Nails    Sun  Fragrance    Men    Women  Men    Body & Shower    Fragrance Sets    Pre-Shave & Shaving    Skincare  Hair Care    Conditioner    Shampoo  Books    Audio CD    Paperback
+2025-09-24T16:38:42+05:30 [info]: Setting up random product category fixture
+2025-09-24T16:39:41+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T16:39:43+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T16:39:43+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T16:39:53+05:30 [info]: Login fixture setup completed successfully
+2025-09-24T16:40:00+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T16:40:01+05:30 [info]: Login fixture setup completed successfully
+2025-09-24T16:40:09+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T16:40:10+05:30 [info]: Login fixture setup completed successfully
+2025-09-24T16:40:13+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T16:40:13+05:30 [info]: Login fixture setup completed successfully
+2025-09-24T16:40:20+05:30 [info]: Login fixture setup completed successfully
+2025-09-24T16:40:20+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T16:40:27+05:30 [info]: Login fixture setup completed successfully
+2025-09-24T16:40:31+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T16:40:33+05:30 [info]: Login fixture setup completed successfully
+2025-09-24T16:40:36+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T16:40:40+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T16:40:44+05:30 [info]: Login fixture setup completed successfully
+2025-09-24T16:40:50+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T16:41:01+05:30 [info]: Login fixture setup completed successfully
+2025-09-24T16:41:06+05:30 [info]: Login fixture setup completed successfully
+2025-09-24T16:41:10+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T16:41:11+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T16:41:12+05:30 [error]: Login fixture setup failed: page.waitForLoadState: Target page, context or browser has been closed
+2025-09-24T16:41:15+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T16:41:22+05:30 [info]: Login fixture setup completed successfully
+2025-09-24T16:41:24+05:30 [info]: Login fixture setup completed successfully
+2025-09-24T16:41:27+05:30 [info]: Login fixture setup completed successfully
+2025-09-24T16:41:32+05:30 [info]: Setting up login fixture - authenticating user
+2025-09-24T16:41:33+05:30 [info]: Setting up guest fixture - no authentication required
+2025-09-24T16:41:41+05:30 [info]: Guest fixture setup completed successfully
+2025-09-24T16:41:42+05:30 [info]: Setting up guest fixture - no authentication required
+2025-09-24T16:41:47+05:30 [info]: Setting up guest fixture - no authentication required
+2025-09-24T16:41:50+05:30 [info]: Guest fixture setup completed successfully
+2025-09-24T16:42:02+05:30 [error]: Login fixture setup failed: page.waitForURL: Target page, context or browser has been closed
+=========================== logs ===========================
+  "domcontentloaded" event fired
+============================================================
+2025-09-24T16:42:03+05:30 [info]: Guest fixture setup completed successfully

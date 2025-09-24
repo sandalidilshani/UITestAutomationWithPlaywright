@@ -79,3 +79,8 @@ Call log:
 [2m  - waiting for navigation until "load"[22m
 [2m    - navigated to "https://automationteststore.com/index.php?rt=product/category&path=49"[22m
 
+2025-09-24T16:41:12+05:30 [error]: Login fixture setup failed: page.waitForLoadState: Target page, context or browser has been closed
+2025-09-24T16:42:02+05:30 [error]: Login fixture setup failed: page.waitForURL: Target page, context or browser has been closed
+=========================== logs ===========================
+  "domcontentloaded" event fired
+============================================================

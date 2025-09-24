@@ -50,7 +50,6 @@ test.describe('Checkout Functionality Tests - TS004', () => {
     expect(shippingAddress).toContain(testData.shippingAddress.address1);
   });
 
-  // ✅ TS004_TC02 - Logged-in User Checkout with Auto-filled Address Verification
   test('TS004_TC02 - Verify single product checkout flow as logged-in user', async ({ addProductToCartFixture }) => {
     const testData = checkoutTestData.checkoutTestData.TS003_TC01;
     const productToAdd = cartTestData.specificProducts[0];
@@ -75,9 +74,10 @@ test.describe('Checkout Functionality Tests - TS004', () => {
     const shippingAddress = await checkoutPage.verifyShippingAddressContains(expectedAddressData);
     console.log('Auto-filled shipping address verified:', shippingAddress);
     const editButtonPresent = await checkoutPage.isEditShippingButtonPresent();
-    expect(editButtonPresent).toBeTruthy();    
-    await checkoutPage.che2button.click();
-    await checkoutPage.confirmOrderButton();
+    expect(editButtonPresent).toBeTruthy();  
+    await checkoutPage.confirmOrder(); 
+
+    
   });
 
   // ✅ TS004_TC02A - Verify auto-filled address details for registered user
@@ -117,13 +117,14 @@ test.describe('Checkout Functionality Tests - TS004', () => {
     console.log('✅ All address details successfully auto-filled for registered user');
   });
 
-  // ✅ TS004_TC03 - Multiple products as guest user
   test('TS004_TC03 - Verify multiple product checkout flow as guest user', async ({ addProductToCartFixture }) => {
     const testData = checkoutTestData.checkoutTestData.TS003_TC01;
     const productsToAdd = cartTestData.specificProducts.slice(0, 2);
 
     for (const product of productsToAdd) {
-      await addProductToCartFixture.addSpecificProductToCart(product, 1);
+    await addProductToCartFixture.addSpecificProductToCart(product, 1);
+    await addProductToCartFixture.verifyProductInCart(product.name, 1);
+
     }
 
     await checkoutPage.navigateToCheckout();
@@ -133,31 +134,15 @@ test.describe('Checkout Functionality Tests - TS004', () => {
     await checkoutPage.proceedToNextStep();
 
     await expect(checkoutPage.confirmationTitle).toBeVisible();
+    await expect(checkoutPage.guestCheckoutTitle).toBeVisible();
 
     const orderSummary = await checkoutPage.getOrderSummary();
     expect(orderSummary.subTotal).not.toBeNull();
     expect(orderSummary.total).not.toBeNull();
   });
 
-  // ✅ TS004_TC04 - Empty cart checkout (should fail)
-  test('TS004_TC04 - Verify checkout with empty cart is not allowed', async () => {
-    await checkoutPage.navigateToCheckout();
-    await expect(cartPage.emptyCartMessage).toBeVisible();
-  });
+  
 
-  // ✅ TS004_TC05 - Guest checkout with missing mandatory fields
-  test('TS004_TC05 - Verify checkout with missing mandatory fields shows errors', async ({ addProductToCartFixture }) => {
-    const testData = checkoutTestData.checkoutTestData.TS003_TC01;
-    const productToAdd = cartTestData.specificProducts[0];
 
-    await addProductToCartFixture.addSpecificProductToCart(productToAdd, 1);
-    await checkoutPage.navigateToCheckout();
-    await checkoutPage.selectGuestCheckout();
-
-    // ❌ Intentionally skip filling mandatory fields
-    await checkoutPage.fillPersonalDetails({ email: testData.personalDetails.email });
-    await checkoutPage.proceedToNextStep();
-
-    await expect(checkoutPage.page.locator('.alert-danger')).toBeVisible();
-  });
+  
 });

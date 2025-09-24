@@ -2,7 +2,6 @@ const { test, expect } = require('@playwright/test');
 const HomePage = require('../pages/HomePage');
 const LoginPage = require('../pages/LoginPage');
 const AccountPage = require('../pages/AccountPage');
-const LogoutPage = require('../pages/LogoutPage');
 const testData = require('../test-data/login-test-data');
 const logger = require('../utils/LoggerUtil');
 
@@ -17,7 +16,6 @@ test.describe('TS001-Validate User Login Flow', () => {
         homePage = new HomePage(page);
         loginPage = new LoginPage(page);
         accountPage = new AccountPage(page);
-        logoutPage = new LogoutPage(page);
         await homePage.navigate();
     });
 
