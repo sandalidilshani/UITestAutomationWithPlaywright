@@ -373,14 +373,137 @@ Modify `playwright.config.js` to:
 - Setup custom base URLs
 - Add additional reporters
 
-## 📈 Performance Optimization
+## 🔄 CI/CD Pipeline
 
-### Network and Load Optimization
-```javascript
-// Wait strategies for better performance
-await this.page.waitForLoadState('networkidle');
-await this.page.waitForLoadState('domcontentloaded');
+### GitHub Actions Workflows
+
+This project includes comprehensive CI/CD automation with two main workflows:
+
+#### 1. Playwright E2E Tests Workflow (`.github/workflows/playwright.yml`)
+
+**Triggers:**
+- Push to `main` or `develop` branches
+- Pull requests to `main` or `develop` branches
+- Nightly execution at 2 AM UTC
+- Manual workflow dispatch
+
+**Features:**
+- **Cross-Browser Testing**: Runs tests on Chromium, Firefox, and WebKit
+- **Parallel Execution**: Tests run simultaneously across browsers
+- **Artifact Management**: Uploads test results, screenshots, and videos
+- **Caching**: Efficient browser and dependency caching
+
+**Workflow Jobs:**
+```yaml
+1. Setup Dependencies
+   - Install Node.js and dependencies
+   - Cache Playwright browsers
+   - Verify installation
+
+2. E2E Tests (Matrix Strategy)
+   - Run tests on Chromium, Firefox, WebKit
+   - Upload test results and reports
+   - Capture failure artifacts
+
+
 ```
+
+#### 2. Test Notifications Workflow (`.github/workflows/notification.yml`)
+
+**Triggers:**
+- Automatically when Playwright E2E Tests complete
+- Manual workflow dispatch
+
+**Features:**
+- **Failure Alerts**: Sends notifications when tests fail
+- **Success Notifications**: Confirms successful test runs
+- **Custom Notifications**: Manual trigger options
+- **Multi-Platform Support**: Slack and Microsoft Teams integration
+- **Detailed Reports**: Generates failure reports with artifacts
+
+**Notification Types:**
+- `summary` - General test summary
+- `test-results` - Detailed test results
+- `failure-alert` - Critical failure notifications
+
+### CI/CD Configuration
+
+#### Environment Variables
+Configure these secrets in your GitHub repository settings:
+
+```bash
+# Optional: For Slack notifications
+SLACK_WEBHOOK_URL=your_slack_webhook_url
+
+# Optional: For Microsoft Teams notifications
+TEAMS_WEBHOOK_URL=your_teams_webhook_url
+```
+
+#### Workflow Customization
+
+**Manual Test Execution:**
+```bash
+# Run specific browser tests
+npx playwright test --project=chromium
+npx playwright test --project=firefox
+npx playwright test --project=webkit
+
+# Run with performance tests
+npx playwright test --grep="performance"
+```
+
+**GitHub Actions Manual Trigger:**
+1. Go to Actions tab in your repository
+2. Select "Playwright E2E Tests"
+3. Click "Run workflow"
+4. Choose options:
+   - Branch selection
+   - Run tests (true/false)
+   - Run performance tests (true/false)
+
+```
+
+#### 2. Test Strategy
+- **Smoke Tests**: Quick validation on every push
+- **Regression Tests**: Full suite on pull requests
+- **Performance Tests**: Scheduled nightly execution
+- **Cross-Browser**: All browsers on main branch
+
+#### 3. Artifact Management
+- **Test Results**: 7-day retention
+- **Failure Artifacts**: 30-day retention
+- **Performance Reports**: 14-day retention
+- **Custom Reports**: 30-day retention
+
+### Monitoring and Alerts
+
+#### Test Execution Monitoring
+- **Real-time Status**: Monitor workflow execution in GitHub Actions
+- **Failure Notifications**: Automatic alerts via Slack/Teams
+- **Artifact Access**: Download screenshots and videos from failed tests
+- **Performance Metrics**: Track test execution times and trends
+
+#### Quality Gates
+- **Test Coverage**: Maintain comprehensive test coverage
+- **Failure Rate**: Monitor and address flaky tests
+- **Performance**: Track test execution performance
+- **Security**: Regular dependency vulnerability scanning
+
+### Deployment Integration
+
+#### Staging Deployment
+```yaml
+# Automatic deployment to staging on develop branch
+if: github.ref == 'refs/heads/develop' && github.event_name == 'push'
+```
+
+#### Production Deployment
+```yaml
+# Automatic deployment to production on main branch
+if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+```
+
+
 
 ### Parallel Execution
 ```javascript
