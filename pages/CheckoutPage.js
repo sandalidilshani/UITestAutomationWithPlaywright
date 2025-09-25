@@ -65,9 +65,10 @@ class CheckoutPage extends BasePage {
     }
 
     async getOrderSummary() {
-        const subTotal = await this.page.locator('tr:has-text("Sub-Total") span.bold').last().textContent();
-        const shipping = await this.page.locator('tr:has-text("Flat Shipping Rate") span.bold').last().textContent().catch(() => '$0.00');
-        const total = await this.page.locator('tr:has-text("Total") span.bold').last().textContent();
+        // Target only the main checkout confirmation table, not the order summary sidebar
+        const subTotal = await this.page.locator('.confirm_total tr:has-text("Sub-Total") td:nth-child(2) span.bold').textContent();
+        const shipping = await this.page.locator('.confirm_total tr:has-text("Flat Shipping Rate") td:nth-child(2) span.bold').textContent().catch(() => '$0.00');
+        const total = await this.page.locator('.confirm_total tr:has-text("Total") td:nth-child(2) span.bold').first().textContent();
         return { 
             subTotal: subTotal?.trim(), 
             shipping: shipping?.trim(), 
@@ -131,7 +132,6 @@ class CheckoutPage extends BasePage {
         await this.page.getByText('Your Order Has Been Processed!');
     }
 
-    // Additional methods for comprehensive test coverage
     
     async modifyQuantity(quantity) {
         const quantityField = this.page.locator('#cart_quantity50');
@@ -146,9 +146,17 @@ class CheckoutPage extends BasePage {
     }
 
     async removeProduct(productName) {
-        const removeButton = this.page.locator(`tr:has-text("${productName}") .remove-item`);
+        // Navigate to cart page first since remove functionality is only available there
+        await this.page.goto('https://automationteststore.com/index.php?rt=checkout/cart');
+        await this.page.waitForLoadState();
+        
+        const removeButton = this.page.locator(`tr:has-text("${productName}") .btn.btn-sm.btn-default`);
         await removeButton.click();
         await this.page.waitForTimeout(500);
+        
+        // Navigate back to checkout
+        await this.page.goto('https://automationteststore.com/index.php?rt=checkout/guest_step_1');
+        await this.page.waitForLoadState();
     }
 
     async isCartEmpty() {
@@ -210,12 +218,15 @@ class CheckoutPage extends BasePage {
     }
 
     async getValidationErrors() {
-        const errorElements = this.page.locator('.error, .alert-danger, .validation-error');
+        // Look for validation error messages that appear after form fields
+        const errorElements = this.page.locator('text=/must be greater than|Please select|is required|is invalid/i');
         const errors = [];
         const count = await errorElements.count();
         for (let i = 0; i < count; i++) {
             const error = await errorElements.nth(i).textContent();
-            errors.push(error);
+            if (error && error.trim()) {
+                errors.push(error.trim());
+            }
         }
         return errors;
     }

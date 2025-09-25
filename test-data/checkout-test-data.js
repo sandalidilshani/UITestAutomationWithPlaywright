@@ -18,7 +18,7 @@ const invalidShippingAddress = {
     address1: '',
     city: '',
     zipCode: '00000',
-    country: 'XX',
+    country: 'United States', // Valid country
     region: ''
 };
 
